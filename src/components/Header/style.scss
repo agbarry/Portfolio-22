@@ -1,0 +1,194 @@
+.sideBar {
+    font-family: $font-1;
+    width: 100%;     
+
+    .sideBarContent {
+        margin-bottom: .2rem;
+        @include animeBackground($color-12, $borderRadius, 20deg, 10%, 80%);
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "L N";
+        
+
+        .logo {
+            grid-area: L;
+            margin-left: 2.5rem;
+        
+            a {
+                font-family: $font-8;
+                color: $white1;
+                font-size: 5rem;
+                text-shadow: 0    0   2px $color-6,
+                            1px -1px 3px$color-7,
+                            -2px -2px 4px $color-5,
+                            2px -4px 5px $color-3,
+                            -2px -6px 6px $color-8,
+                            0   -8px 7px $color-9,
+                            1px -9px 8px $color-10;
+            }
+        
+        }
+
+        .navigation {
+            grid-area: N;
+        
+            .liste {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 100%;
+                grid-template-areas: 
+                    "H A C";
+                margin-top: 2.5rem;
+
+                .accueil, .a_propos, .contac, .formation, .competences, .experiences {
+                    text-align: center;
+                }
+
+                .formation, .competences, .experiences {
+                    display: none;
+                }
+
+                .accueil {
+                    grid-area: H;
+                }
+
+                .a_propos {
+                    grid-area: A;
+                }
+
+                .contac {
+                    grid-area: C;
+                }             
+        
+                li {
+                    font-size: 1.4rem;
+        
+                    i {
+                        display: none;
+                    }
+        
+                    a {
+                        color: $black1;
+                    }
+                    .navActive {
+                        text-shadow: 0    0   2px $color-6,
+                                    1px -1px 3px$color-7,
+                                    -2px -2px 4px $color-5,
+                                    2px -4px 5px $color-3,
+                                    -2px -6px 6px $color-8,
+                                    0   -8px 7px $color-9,
+                                    1px -9px 8px $color-10;
+                    }
+
+                    span {
+                        &:hover {
+                            text-shadow: 0    0   2px $color-6,
+                                        1px -1px 3px$color-7,
+                                        -2px -2px 4px $color-5,
+                                        2px -4px 5px $color-3,
+                                        -2px -6px 6px $color-8,
+                                        0   -8px 7px $color-9,
+                                        1px -9px 8px $color-10;
+                        }
+                    }
+                
+                }
+            }
+
+        }
+    }
+    
+}
+
+@media  screen and (max-width: 832px) {
+    .sideBar {
+
+        .sideBarContent {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas:
+                "N";
+
+            .logo {
+                display: none;
+            }
+            
+            .navigation {
+                grid-area: N;
+
+                .liste {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                    grid-template-rows: 100%;
+                    grid-template-areas: 
+                        "H F K E A C";
+
+                    li {  
+                        font-size: 1.1rem;
+                        span {
+                            display: grid;
+                            padding: 0rem 0rem 2rem 0rem;
+                        }
+                    }
+
+                    .formation, .competences, .experiences {
+                        display: grid;
+                    }
+
+                    .accueil {
+                        grid-area: H;
+                    }
+
+                    .formation {
+                        grid-area: F;
+                    }
+
+                    .competences {
+                        grid-area: K;
+                    }
+
+                    .experiences {
+                        grid-area: E;
+                    }
+
+                    .a_propos {
+                        grid-area: A;
+                    }
+
+                    .contac {
+                        grid-area: C;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: 672px) {
+    .sideBar {
+
+        .sideBarContent {
+            
+            .navigation {
+
+                .liste {
+
+                    li {
+
+                        i {
+                            display: grid;
+                            font-size: 2.0rem !important;
+                            padding: 0rem 0rem 2rem 0rem;
+                        }
+                            
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,145 @@
+import mLudoEd from "../../assets/documents/Memoire_ludoed.pdf";
+import pLudoEd from "../../assets/documents/Présentation_ludoed.pdf";
+import bacc from "../../assets/documents/doc_bacchanator.pdf";
+import rUbbot from "../../assets/documents/Rapport_ubbot.pdf";
+import cUbbot from "../../assets/documents/cdc_ubbot.pdf";
+import rDOTR from "../../assets/documents/README_dotr.md";
+import ExperienceCard from "../../components/ExperienceCard";
+import styled from 'styled-components';
+
+/* Liste des expériences */
+const experienceList = [
+  {
+    id: 0,
+    projectName: "Logiciel ludo-éducatif",
+    entrepriseName: "Université de Bordeaux",
+    projectTitle:
+      "Réalisation d'une application ludique sur téléphone et tablette à destination d’enfants présentant des retards de développements cognitifs",
+    description: [
+      "Participation au choix des différents jeux à implémenter",
+      "Élaboration du cahier des charges",
+      "Conception des niveaux",
+      "Implémentation des différents jeux",
+    ],
+    langages: ["Java", "Android studio"],
+    documents: [
+      {
+        id: 0,
+        name: "Mémoire",
+        content: mLudoEd,
+        title: "Mémoire logiciel ludo-éducatif",
+      },
+      {
+        id: 1,
+        name: "Présentation",
+        content: pLudoEd,
+        title: "Rapport pour la présentation",
+      },
+    ],
+    date: '2020-2021'
+  },
+  {
+    id: 1,
+    projectName: "Bacchanator",
+    entrepriseName: "Université de Bordeaux",
+    projectTitle:
+      "Né suite à l'appel à projet du musée des beaux-arts de Bordeaux. Inspiré du jeu Akinator, ce jeu permet de deviner une oeuvre du musée des beaux-arts de Bordeaux à travers une serie de questions posées à l'utilisateur.",
+    description: [
+      "Participation au choix du jeu à réaliser",
+      "Élaboration du cahier des charges",
+      "Implémentation des différentes fonctionnalités",
+    ],
+    langages: ["Django", "Python", "Html", "Css", "Bootstrap"],
+    documents: [
+      {
+        id: 0,
+        name: "Mémoire",
+        content: bacc,
+        title: "Document technique Bacchanator",
+      },
+    ],
+    date: '2019-2020'
+  },
+  {
+    id: 2,
+    projectName: "Ubbot Assist",
+    entrepriseName: "Université de Bordeaux",
+    projectTitle:
+      "Un assistant virtuel(chatbot) réalisé dans le cadre de l’UE – Projet technologique pour valoriser l’innovation numérique au sein de l’Université de Bordeaux.",
+    description: [
+      "Analyse de l’export de l'offre de formation du collège S&T",
+      "Élaboration du cahier des charges",
+      "Création et liaison des entités(Entity) et intentions(Intents)",
+      "Mise en place d'une Base de données",
+      "Construction du dialogue",
+      "Mise en place d'un site web et intégration du bot",
+    ],
+    langages: ["IBM Watson Assistant", "Django", "Bootstrap"],
+    documents: [
+      {
+        id: 0,
+        name: "Rapport",
+        content: rUbbot,
+        title: "Slides de présentation",
+      },
+      {
+        id: 1,
+        name: "CDC",
+        content: cUbbot,
+        title: "Cahier des charges Ubbot Assist",
+      },
+    ],
+    date: '2019-2020'
+  },
+  {
+    id: 3,
+    projectName: "Duck Of The Realm",
+    entrepriseName: "Université de Bordeaux",
+    projectTitle:
+      "Un Jeu se déroulant dans un royaume lointain, ou chaque joueur incarne un duc en lutte pour devenir le nouveau roi. Le but dans ce projet est la mise en place des notions de la programmation orientée objet. ",
+    description: ["Analyse de l’existant"],
+    langages: ["Java", "JavaFX", "Eclipse"],
+    documents: [
+      {
+        id: 0,
+        name: "Rapport",
+        content: rDOTR,
+        title: "Rapport Duck Of The Realm",
+      },
+    ],
+    date: '2019-2020'
+  },
+];
+
+
+/* Mise en forme */
+const ExperienceWrapper = styled.div`
+    & h1 {
+        text-align: center;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+`
+
+
+function Experience() {
+  return (
+    <ExperienceWrapper>
+      <h1>Projets universitaires</h1>
+      {experienceList.map((experience) => (
+        <ExperienceCard
+          key={`${experience.id}`}
+          projectName={experience.projectName}
+          entrepriseName={experience.entrepriseName}
+          projectTitle={experience.projectTitle}
+          description={experience.description}
+          langages={experience.langages}
+          documents={experience.documents}
+          date={experience.date}
+        />
+      ))}
+    </ExperienceWrapper>
+  );
+}
+
+export default Experience;
