@@ -79,12 +79,16 @@ const ProjectDocuments = styled.ul`
 
     @media screen and (max-width: 960px) {
         font-size: 0.8rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        
     }
 `
 
 /* Fonction representant une expérience  */
-function ExperienceCard({ projectName, entrepriseName,
-    projectTitle, description, langages, documents, date}) {
+function ExperienceCard( { projectName, entrepriseName,
+    projectTitle, description, langages, documents, date} ) {
 
   return (
     <CardsWrapper className="content">

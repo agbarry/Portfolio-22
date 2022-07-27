@@ -103,12 +103,16 @@ a {
     cursor: pointer;
 
     &:visited {
-        color: $gray;
+        color: $color-5;
     }
 }
 
 .content {
     @include animeBackground($special, $borderRadius, -7deg, 5%, 25%);
+}
+
+.content1 {
+    @include animeBackground($special, $borderRadius, 7deg, 5%, 80%);
 }
 
 .download {

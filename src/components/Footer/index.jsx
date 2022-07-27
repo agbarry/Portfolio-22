@@ -5,8 +5,6 @@ const FooterContainer = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #54a5a5;
-    color: white;
     text-align: center;
     padding-top: 10px;
 `
@@ -17,11 +15,11 @@ const FooterContent = styled.div`
 
 function Footer() {
     return ( 
-        <FooterContainer>
+        <FooterContainer className='content1'>
             <span>agbarry - 2022</span>
             <FooterContent>
-                <StyledLink to="/contact"> Contactez-moi </StyledLink>
-                <StyledLink to="/a_propos"> À propos de moi </StyledLink>
+                <StyledLink to="/contact" $isFullLink> Contactez-moi </StyledLink>
+                <StyledLink to="/a_propos" $isFullLink> À propos de moi </StyledLink>
             </FooterContent>
         </FooterContainer>
      );

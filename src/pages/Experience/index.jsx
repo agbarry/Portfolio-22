@@ -4,6 +4,10 @@ import bacc from "../../assets/documents/doc_bacchanator.pdf";
 import rUbbot from "../../assets/documents/Rapport_ubbot.pdf";
 import cUbbot from "../../assets/documents/cdc_ubbot.pdf";
 import rDOTR from "../../assets/documents/README_dotr.md";
+import rPAP1 from '../../assets/documents/rapportPAP1.pdf';
+import rPAP2 from '../../assets/documents/rapportPAP2.pdf';
+import rPAP3 from '../../assets/documents/rapportPAP3.pdf';
+import rPAP4 from '../../assets/documents/rapportPAP4.pdf';
 import ExperienceCard from "../../components/ExperienceCard";
 import styled from 'styled-components';
 
@@ -11,10 +15,49 @@ import styled from 'styled-components';
 const experienceList = [
   {
     id: 0,
+    projectName: "EasyPAP",
+    entrepriseName: "Université de Bordeaux",
+    projectTitle:
+      "Simulation d’un tas de sable abélien en programmation parallèle. Ce projet se subdivise en quatre rendus(parties) dont les trois premiers sont fait en groupe de deux(binôme) et la dernière partie en individuel",
+    description: [
+      "Travail en équipe",
+    ],
+    langages: ["C", "C++", "OpenMP", "OpenCL", "MPI", "GIT/GITLAB"],
+    documents: [
+      {
+        id: 0,
+        name: "Rapport1",
+        content: rPAP1,
+        title: "Rapport de la première partie",
+      },
+      {
+        id: 1,
+        name: "Rapport2",
+        content: rPAP2,
+        title: "Rapport de la deuxième partie",
+      },
+      {
+        id: 2,
+        name: "Rapport3",
+        content: rPAP3,
+        title: "Rapport de la troisième partie",
+      },
+      {
+        id: 3,
+        name: "Rapport4",
+        content: rPAP4,
+        title: "Rapport de la dernière partie",
+      },
+    ],
+    date: '2021-2022'
+  },
+
+  {
+    id: 1,
     projectName: "Logiciel ludo-éducatif",
     entrepriseName: "Université de Bordeaux",
     projectTitle:
-      "Réalisation d'une application ludique sur téléphone et tablette à destination d’enfants présentant des retards de développements cognitifs",
+      "Conception d’une application ludique sur téléphone et tablette à destination des enfants présentants des retards de développement cognitifs.",
     description: [
       "Participation au choix des différents jeux à implémenter",
       "Élaboration du cahier des charges",
@@ -38,8 +81,9 @@ const experienceList = [
     ],
     date: '2020-2021'
   },
+
   {
-    id: 1,
+    id: 2,
     projectName: "Bacchanator",
     entrepriseName: "Université de Bordeaux",
     projectTitle:
@@ -60,8 +104,9 @@ const experienceList = [
     ],
     date: '2019-2020'
   },
+
   {
-    id: 2,
+    id: 3,
     projectName: "Ubbot Assist",
     entrepriseName: "Université de Bordeaux",
     projectTitle:
@@ -91,8 +136,9 @@ const experienceList = [
     ],
     date: '2019-2020'
   },
+
   {
-    id: 3,
+    id: 4,
     projectName: "Duck Of The Realm",
     entrepriseName: "Université de Bordeaux",
     projectTitle:

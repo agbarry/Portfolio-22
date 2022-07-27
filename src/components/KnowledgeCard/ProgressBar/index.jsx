@@ -1,12 +1,24 @@
 import styled from 'styled-components';
 import colors from '../../../utils/style/colors';
 
-const ProgressBarStyled = styled.div`
+
+/* Mise en forme */
+const ProgressBarWrapper = styled.ul`
+    display: grid;
+    grid-template-columns: 0.52fr 3.5fr;
+
+    @media screen and (max-width: 960px) {
+        grid-template-columns: 0.5fr 2fr;
+    }
+`
+
+const ProgressBarStyled = styled.li`
     height: .4rem;
     background: transparent;
     border-radius: 50px;
     margin-top: .2rem;
     position: relative;
+    margin-right: 2rem;
 
     &::after {
         content: '';
@@ -26,14 +38,16 @@ const ProgressBarStyled = styled.div`
 `
 
 function ProgressBar({name, xp}) {
-    const xpYears = 5;
+    const xpYears = 7.6;
     const progressBar = xp / xpYears * 100 + '%';
 
-    return ( 
-        <div>
-            <li>{name}</li>
-            <ProgressBarStyled style={{width:progressBar}} />
-        </div>
+    return (
+        <ProgressBarWrapper>
+            <li>
+                {name}
+            </li>
+            <ProgressBarStyled style={{width:progressBar}} > </ProgressBarStyled>
+        </ProgressBarWrapper>
      );
 }
 

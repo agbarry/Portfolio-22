@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled, { keyframes } from 'styled-components';
+import colors from "./colors";
 
 const rotate = keyframes`
     from {
@@ -18,13 +19,13 @@ export const StyledLink = styled(Link)`
     text-align: center;
     text-decoration: none;
     ${(props) => props.$isFullLink &&
-        `color: white; 
+        `color: ${colors.color13}; 
         border-radius: 30px; 
-        background-color: '#ef52d1';
+        background-color: ${colors.special};
         `
     }
     &:hover {
-        background-color: blue;
+        background-color: ${colors.color13};
         border-bottom: 4px solid #fff;
         transition: all 0.3s ease-out;
     }
