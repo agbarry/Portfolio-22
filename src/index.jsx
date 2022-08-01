@@ -10,6 +10,8 @@ import Home from './pages/Home';
 import Knowledge from './pages/Knowledge';
 import Contact from './pages/Contact';
 import './utils/style/styles.scss';
+import { ThemeProvider } from './utils/context';
+import GlobalStyle from './utils/style/GlobalStyle';
 
 const container = document.getElementById('root')
 const root = createRoot(container)
@@ -17,18 +19,22 @@ const root = createRoot(container)
 root.render(
   <React.StrictMode>
     <Router>
-      <Header />
+      <ThemeProvider>
+        <GlobalStyle />
+        
+        <Header />
 
-      <Routes>
-        <Route path='/' element={<Home />}> </Route>
-        <Route path="/formation" element={<Education />}> </Route>
-        <Route path="/competences" element={<Knowledge />}> </Route>
-        <Route path="/experiences" element={<Experience />}> </Route>
-        <Route path="/a_propos" element={<About />}> </Route>
-        <Route path="/contact" element={<Contact />}> </Route>
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Home />}> </Route>
+          <Route path="/formation" element={<Education />}> </Route>
+          <Route path="/competences" element={<Knowledge />}> </Route>
+          <Route path="/experiences" element={<Experience />}> </Route>
+          <Route path="/a_propos" element={<About />}> </Route>
+          <Route path="/contact" element={<Contact />}> </Route>
+        </Routes>
 
-      <Footer />
+        <Footer />
+      </ThemeProvider>
     </Router>
   </React.StrictMode>
 )
