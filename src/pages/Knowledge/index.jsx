@@ -42,56 +42,85 @@ const othersKnowledges = [
 
 /* Mise en forme */
 const KnowledgeWrapper = styled.div`
-    padding: 1rem;
+    margin: 5rem; 
 `
 
 const KnowledgeContent = styled.div`
-    margin-left: 5rem;
-    margin-right: 5rem;
+    padding-left: 1rem;
+
+    div {
+        max-width: 100%;
+    }
 `
 
 const OthersWrapper = styled.div`
-    margin: 5rem;
+    margin-top: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    ul {
+
+        li {
+            line-height: 1.6rem;
+            padding-left: 0.5rem;
+        }
+
+        i {
+            padding-right: 0.5rem;
+        }
+    }
 `
 
 const YearsStyled = styled.div`
     font-size: .88rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: ${colors.color13};
-    width: 60%;
+    width: 100%;
 
-    span {
-        width: 10%;
+    h3 {
+        padding-left: 22rem;
+    }
 
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(4) {
-            text-align: right;
+    div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
 
-            &:before {
-                content: '';
-                background: ${colors.color13};
-                position: absolute;
-                height: 17rem;
-                width: 1px;
-                transform: translate(9px, 18px);
+        span {
+            width: 10%;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                text-align: right;
+
+                &:before {
+                    content: '';
+                    background: ${colors.color13};
+                    position: absolute;
+                    height: 24rem;
+                    width: 1px;
+                    transform: translate(9px, 18px);
+                }
             }
-        }
 
-        &:nth-child(2) {
-            width: 28%;
-        }
+           
 
-        &:nth-child(3) {
-            width: 31%;
-        }
+            &:nth-child(1) {
+                width: 45%;
+            }
 
-        &:nth-child(4) {
-            width: 30%;
+            &:nth-child(2) {
+                width: 31.2%;
+            }
+
+            &:nth-child(3) {
+                width: 30%;
+            }
         }
     }
 `
@@ -99,14 +128,17 @@ const YearsStyled = styled.div`
 function Knowledge() {
     return ( 
         <KnowledgeWrapper>
+                <h2>Languages & frameworks</h2>
             <KnowledgeContent className="content">
-                <h3>Languages & frameworks</h3>
 
                 <YearsStyled>
-                    <span>Années d'expérience</span>
-                    <span> 1 an </span>
-                    <span> 3 ans </span>
-                    <span> 5 ans </span>
+                    <h3>Années d'expériences</h3>
+
+                    <div>
+                        <span> 1 an </span>
+                        <span> 3 ans </span>
+                        <span> 5 ans </span>
+                    </div>
                 </YearsStyled>
 
                 <div>
@@ -122,16 +154,22 @@ function Knowledge() {
 
             <OthersWrapper>
                 <ul className="content">
-                    <h3>IDE & Outils</h3>
+                    <h2>IDE & Outils</h2>
                     {toolsList.map((tool) => (
-                        <li key={`${tool.id}`}> {tool.name} </li>
+                        <li key={`${tool.id}`}> 
+                            <i class="fa-solid fa-star"></i> 
+                            {tool.name} 
+                        </li>
                     ))}
                 </ul>
                 
                 <ul className="content">
-                    <h3>Autres</h3>
+                    <h2>Autres</h2>
                     {othersKnowledges.map((other) => (
-                        <li key={`${other.id}`}> {other.name} </li>
+                        <li key={`${other.id}`}>
+                            <i class="fa-solid fa-check"></i>
+                            {other.name} 
+                        </li>
                     ))}
                 </ul>
             </OthersWrapper>

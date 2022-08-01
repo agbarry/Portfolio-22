@@ -18,7 +18,10 @@ const experienceList = [
     projectName: "EasyPAP",
     entrepriseName: "Université de Bordeaux",
     projectTitle:
-      "Simulation d’un tas de sable abélien en programmation parallèle. Ce projet se subdivise en quatre rendus(parties) dont les trois premiers sont fait en groupe de deux(binôme) et la dernière partie en individuel",
+      "Simulation d’un tas de sable abélien en programmation parallèle. Ce projet à été réalisé tout au long "+
+      "du second semestre de master 1 et se subdivise en quatre rendus(parties), les trois premiers sont fait "+
+      "en groupe de deux(binôme) et le dernier rendu en individuel. "+
+      "L'objectif est ",
     description: [
       "Travail en équipe",
     ],
@@ -160,11 +163,13 @@ const experienceList = [
 
 /* Mise en forme */
 const ExperienceWrapper = styled.div`
-    & h1 {
-        text-align: center;
-        font-size: 3rem;
-        text-transform: uppercase;
-    }
+  margin: 5rem;
+
+  & h1 {
+      text-align: center;
+      font-size: 3rem;
+      text-transform: uppercase;
+  }
 `
 
 
@@ -172,6 +177,7 @@ function Experience() {
   return (
     <ExperienceWrapper>
       <h1>Projets universitaires</h1>
+      
       {experienceList.map((experience) => (
         <ExperienceCard
           key={`${experience.id}`}

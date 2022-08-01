@@ -7,18 +7,23 @@ const ProgressBarWrapper = styled.ul`
     display: grid;
     grid-template-columns: 0.52fr 3.5fr;
 
+    li {
+        line-height: 1.6rem;
+    }
+
     @media screen and (max-width: 960px) {
         grid-template-columns: 0.5fr 2fr;
     }
 `
 
+
 const ProgressBarStyled = styled.li`
     height: .4rem;
     background: transparent;
     border-radius: 50px;
-    margin-top: .2rem;
+    margin-top: .8rem;
+    margin-left: 12.5rem;
     position: relative;
-    margin-right: 2rem;
 
     &::after {
         content: '';
@@ -31,21 +36,19 @@ const ProgressBarStyled = styled.li`
 
         @keyframes line {
             to {
-                width: 80%;
+                width: 100%;
             }
         }
     }
 `
 
 function ProgressBar({name, xp}) {
-    const xpYears = 7.6;
+    const xpYears = 6;
     const progressBar = xp / xpYears * 100 + '%';
 
     return (
         <ProgressBarWrapper>
-            <li>
-                {name}
-            </li>
+            <li> {name} </li>
             <ProgressBarStyled style={{width:progressBar}} > </ProgressBarStyled>
         </ProgressBarWrapper>
      );

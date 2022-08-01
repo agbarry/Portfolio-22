@@ -50,7 +50,7 @@ const EducationContainer = styled.div`
   gap: 10px;
   grid-template-columns: repeat(1, 1fr);
   align-items: center;
-  padding: 15px;
+  margin: 5rem;
 `;
 
 function Education() {
