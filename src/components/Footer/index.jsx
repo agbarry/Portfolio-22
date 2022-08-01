@@ -1,26 +1,21 @@
 import styled from 'styled-components';
-import { StyledLink } from '../../utils/style/Global';
+import colors from '../../utils/style/colors';
 
 const FooterContainer = styled.div`
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding-top: 10px;
-`
-
-const FooterContent = styled.div`
-    padding: 20px;
+    padding: 1rem;
+    color: ${colors.color6};
 `
 
 function Footer() {
+
     return ( 
         <FooterContainer className='content1'>
-            <span>agbarry - 2022</span>
-            <FooterContent>
-                <StyledLink to="/contact" $isFullLink> Contactez-moi </StyledLink>
-                <StyledLink to="/a_propos" $isFullLink> À propos de moi </StyledLink>
-            </FooterContent>
+            <span>copyright 2021-2022 by agbarry</span>
         </FooterContainer>
      );
 }
