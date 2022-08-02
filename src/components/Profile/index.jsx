@@ -1,6 +1,8 @@
 import portrait from '../../assets/images/portrait.jpg';
 import styled from 'styled-components';
 import colors from '../../utils/style/colors';
+import { useContext } from 'react';
+import { ThemeContext } from '../../utils/context';
 
 const ProfileWrapper = styled.div`
     display: flex;
@@ -11,9 +13,9 @@ const ImageStyled = styled.img`
     height: 300px;
     background: transparent;
     border-radius: 40%;
-    box-shadow: 0 0 0 4px ${colors.color13}, 
+    box-shadow: 0 0 0 4px ${colors.color10}, 
                 0 0 0 8px ${colors.color5}, 
-                0 0 0 12px ${colors.white};
+                0 0 0 12px ${({ isDarkMode }) => (isDarkMode ? colors.black : colors.white)};
 
     &:hover {
         transform: scale(1.1);
@@ -23,13 +25,13 @@ const ImageStyled = styled.img`
 
 const NameStyled = styled.h2`
     font-size: 1.8rem;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
 `
 
 const JobStyled = styled.h3`
     font-size: 1.2rem;
     padding-top: 1rem;
-    color: ${colors.color6}
+    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
 `
 
 const SocialNetworkStyled = styled.ul`
@@ -42,13 +44,15 @@ const SocialNetworkStyled = styled.ul`
 `
 
 function Profile() {
+    const { theme } = useContext(ThemeContext)
+
     return ( 
         <ProfileWrapper>
-            <ImageStyled src={portrait} alt="Portrait du profile" />
+            <ImageStyled src={portrait} alt="Portrait du profile" isDarkMode={theme === 'dark'} />
 
             <NameStyled> Aguibou BARRY </NameStyled>
 
-            <JobStyled>Développeur fullstack</JobStyled>
+            <JobStyled isDarkMode={theme === 'dark'}>Développeur fullstack</JobStyled>
 
             <SocialNetworkStyled>
                 <li>

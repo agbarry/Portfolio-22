@@ -44,9 +44,9 @@ function Header() {
 
   return (
     <NavContainer className="sideBar">
-      <LogoStyled to="/" className="logo"> <span>Agb22</span> </LogoStyled>
+      <LogoStyled to="/" className="logo" title="Accueil"> <span>Agb22</span> </LogoStyled>
 
-      <NightModeButton onClick={() => toggleTheme()}> 
+      <NightModeButton onClick={() => toggleTheme()} title={'Passez en mode '+(theme === 'light' ? 'dark' : 'light')}> 
           {theme === 'light' ? '☀️' : '🌙' }
       </NightModeButton>
 

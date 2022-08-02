@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import colors from '../../utils/style/colors';
+import { useContext } from 'react';
+import { ThemeContext } from '../../utils/context'
 
 const FooterContainer = styled.div`
     position: fixed;
@@ -8,13 +10,14 @@ const FooterContainer = styled.div`
     width: 100%;
     text-align: center;
     padding: 1rem;
-    color: ${colors.color6};
+    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
 `
 
 function Footer() {
+    const { theme } = useContext(ThemeContext)
 
     return ( 
-        <FooterContainer className='content1'>
+        <FooterContainer className='content1' isDarkMode={theme === 'dark'}>
             <span>copyright 2021-2022 by agbarry</span>
         </FooterContainer>
      );

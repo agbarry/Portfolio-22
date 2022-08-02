@@ -1,14 +1,16 @@
 import { useContext } from 'react';
-import { createGlobalStyle } from 'styled-components';
 import { ThemeContext } from '../context';
+import { createGlobalStyle } from 'styled-components';
 import colors from './colors';
+import bgLight from '../../assets/images/bg_light.jpg';
+import bgDark from '../../assets/images/bg_dark.jpg';
 
 /* Mise en page globale */
 const StyledGlobalStyle = createGlobalStyle`
     body {
         margin: 0;
-        background-image: ${({ isDarkMode }) => (isDarkMode ? `url(${colors.dark})` : `url(${colors.light})`)}; 
-        color: ${({ isDarkMode }) => (isDarkMode ? colors.white1 : colors.black1)}
+        background-image: ${({ isDarkMode }) => (isDarkMode ? `url(${bgDark})` : `url(${bgLight})`)}; 
+        color: ${({ isDarkMode }) => (isDarkMode ? colors.white : colors.black)}
     }
 
     * {
