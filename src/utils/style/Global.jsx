@@ -1,16 +1,6 @@
 import { Link } from "react-router-dom";
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import colors from "./colors";
-
-const rotate = keyframes`
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-`
 
 export const StyledLink = styled(Link)`
     padding: 10px 15px;
@@ -30,18 +20,21 @@ export const StyledLink = styled(Link)`
         transition: all 0.3s ease-out;
     }
 
+    i {
+        display: none;
+    }
+
     // @media screen and (max-width: 960px) {
     //     display: none;
+
+    //     i {
+    //         display: block;
+    //     }
     // }
 `
 
-
-export const Loader = styled.div`
-    padding: 10px;
-    border: 6px solid '#ef52d1';
-    border-bottom-color: transparent;
-    border-radius: 32px;
-    animation: ${rotate} 1s infinite linear;
-    height: 10px;
-    width: 10px;
+/* Pour un background personnalisé */
+export const animeBackground = (args) => `
+    background: linear-gradient(${args.deg}, ${args.color} ${args.percent1}, transparent ${args.percent2});
+    border-radius: ${args.border};
 `

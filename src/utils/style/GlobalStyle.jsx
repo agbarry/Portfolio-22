@@ -4,13 +4,15 @@ import { createGlobalStyle } from 'styled-components';
 import colors from './colors';
 import bgLight from '../../assets/images/bg_light.jpg';
 import bgDark from '../../assets/images/bg_dark.jpg';
+import fonts from './fonts';
 
 /* Mise en page globale */
 const StyledGlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         background-image: ${({ isDarkMode }) => (isDarkMode ? `url(${bgDark})` : `url(${bgLight})`)}; 
-        color: ${({ isDarkMode }) => (isDarkMode ? colors.white : colors.black)}
+        color: ${({ isDarkMode }) => (isDarkMode ? colors.white : colors.black)};
+        font-family: ${fonts.font1[0]}, ${fonts.font1[1]};
     }
 
     * {

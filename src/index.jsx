@@ -9,9 +9,9 @@ import Experience from './pages/Experience';
 import Home from './pages/Home';
 import Knowledge from './pages/Knowledge';
 import Contact from './pages/Contact';
-import './utils/style/styles.scss';
 import { ThemeProvider } from './utils/context';
 import GlobalStyle from './utils/style/GlobalStyle';
+import Error from './components/Error';
 
 const container = document.getElementById('root')
 const root = createRoot(container)
@@ -31,6 +31,7 @@ root.render(
           <Route path="/experiences" element={<Experience />}> </Route>
           <Route path="/a_propos" element={<About />}> </Route>
           <Route path="/contact" element={<Contact />}> </Route>
+          <Route path="/*" element={<Error />}> </Route>
         </Routes>
 
         <Footer />
