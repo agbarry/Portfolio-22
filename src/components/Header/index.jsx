@@ -1,52 +1,81 @@
-import { ThemeContext } from "../../utils/context";
-import { useContext } from "react";
-import { LogoStyled, NavContainer, NightModeButton } from "./HeaderElements";
-import { StyledLink } from "../../utils/style/Global";
-
+import { ThemeContext } from '../../utils/context'
+import { useContext } from 'react'
+import { LogoStyled, NavContainer, NightModeButton } from './HeaderElements'
+import { StyledLink } from '../../utils/style/Global'
+import {
+  FaUserGraduate,
+  FaAward,
+  FaBriefcase,
+  FaAddressCard,
+  FaHome,
+} from 'react-icons/fa'
+import { FcAbout } from 'react-icons/fc'
 
 function Header() {
-  const { toggleTheme, theme } = useContext(ThemeContext);
+  const { toggleTheme, theme } = useContext(ThemeContext)
 
   return (
-    <NavContainer>
-      <LogoStyled to="/" title="Accueil">
-        <span>Agb22</span>{" "}
+    <NavContainer $isDarkMode={theme === 'dark'}>
+      <LogoStyled to="/" title="Accueil" $isDarkMode={theme === 'dark'}>
+        <span>Agb22</span>
+        <FaHome className="react-icons" />
       </LogoStyled>
 
       <NightModeButton
         onClick={() => toggleTheme()}
-        title={"Passez en mode " + (theme === "light" ? "dark" : "light")}
+        title={'Passez au mode ' + (theme === 'light' ? 'dark' : 'light')}
       >
-        {theme === "light" ? "☀️" : "🌙"}
+        {theme === 'light' ? '☀️' : '🌙'}
       </NightModeButton>
 
       <nav>
-        <StyledLink to="/formation">
-          <i class="fas fa-user-graduate" title="Formation"></i>
-          Formation
+        <StyledLink
+          $isDarkMode={theme === 'dark'}
+          className={({ isActive }) => (isActive ? 'active' : 'notActive')}
+          to="/formation"
+          title="Formation"
+        >
+          <FaUserGraduate className="react-icons" /> <span>Formation</span>
         </StyledLink>
 
-        <StyledLink to="/competences">
-          <i class="fas fa-award" title="Compétences"></i>
-          Compétences
+        <StyledLink
+          $isDarkMode={theme === 'dark'}
+          className={({ isActive }) => (isActive ? 'active' : 'notActive')}
+          to="/competences" 
+          title="Compétences"
+        >
+          <FaAward className="react-icons" /> <span>Compétences</span>
         </StyledLink>
 
-        <StyledLink to="/experiences">
-          <i class="fas fa-briefcase" title="Expériences"></i>
-          Expériences
+        <StyledLink
+          $isDarkMode={theme === 'dark'}
+          className={({ isActive }) => (isActive ? 'active' : 'notActive')}
+          to="/experiences" 
+          title="Expériences"
+        >
+          <FaBriefcase className="react-icons" /> <span>Expériences</span>
         </StyledLink>
 
-        <StyledLink to="/contact">
-          <i className="fas fa-mountain" title="À propos"></i>
-          Contact
+        <StyledLink
+          $isDarkMode={theme === 'dark'}
+          className={({ isActive }) => (isActive ? 'active' : 'notActive')}
+          to="/contact" 
+          title="Contact"
+        >
+          <FaAddressCard className="react-icons" /> <span>Contact</span>
         </StyledLink>
 
-        <StyledLink to="/a_propos">
-          <i className="fas fa-address-book" title="Contact"></i>À propos
+        <StyledLink
+          $isDarkMode={theme === 'dark'}
+          className={({ isActive }) => (isActive ? 'active' : 'notActive')}
+          to="/a_propos" 
+          title="À propos"
+        >
+          <FcAbout className="react-icons" /> <span>À propos</span>
         </StyledLink>
       </nav>
     </NavContainer>
-  );
+  )
 }
 
-export default Header;
+export default Header

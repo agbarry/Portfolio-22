@@ -1,18 +1,20 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../context';
-import { createGlobalStyle } from 'styled-components';
-import colors from './colors';
-import bgLight from '../../assets/images/bg_light.jpg';
-import bgDark from '../../assets/images/bg_dark.jpg';
-import fonts from './fonts';
+import { useContext } from 'react'
+import { ThemeContext } from '../context'
+import { createGlobalStyle } from 'styled-components'
+import colors from './colors'
+import bgLight from '../../assets/images/bg_light.jpg'
+import bgDark from '../../assets/images/bg_dark.jpg'
+import fonts from './fonts'
 
 /* Mise en page globale */
 const StyledGlobalStyle = createGlobalStyle`
     body {
         margin: 0;
-        background-image: ${({ isDarkMode }) => (isDarkMode ? `url(${bgDark})` : `url(${bgLight})`)}; 
-        color: ${({ isDarkMode }) => (isDarkMode ? colors.white : colors.black)};
-        font-family: ${fonts.font1[0]}, ${fonts.font1[1]};
+        background-image: ${({ isDarkMode }) =>
+          isDarkMode ? `url(${bgDark})` : `url(${bgLight})`}; 
+        color: ${({ isDarkMode }) =>
+          isDarkMode ? colors.white1 : colors.black1};
+        font-family: ${fonts.font5}, ${fonts.fontParams};
     }
 
     * {
@@ -32,19 +34,19 @@ const StyledGlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         cursor: pointer;
+        color: ${({ isDarkMode }) =>
+          isDarkMode ? colors.color5 : colors.color6};
     
-        &:visited {
-            color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
-        }
+        /* &:visited {
+            
+        } */
     }
 `
 
 function GlobalStyle() {
-    const { theme } = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext)
 
-    return ( 
-        <StyledGlobalStyle isDarkMode={theme === 'dark'}/>
-     );
+  return <StyledGlobalStyle isDarkMode={theme === 'dark'} />
 }
 
-export default GlobalStyle;
+export default GlobalStyle

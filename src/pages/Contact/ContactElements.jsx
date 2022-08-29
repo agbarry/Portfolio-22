@@ -17,21 +17,16 @@ export const CardStyled = styled.div`
 `;
 export const AddressContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: ${colors.color6};
   text-transform: lowercase;
 `;
 
 export const AddressStyled = styled.span`
   padding: 15px;
   font-size: 1.2rem;
-
-  & i {
-    color: ${colors.special};
-    padding-right: 10px;
-  }
+  color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
 `;
 
 export const ContactContainer = styled.div`
@@ -40,14 +35,14 @@ export const ContactContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin: 5rem;
+  margin-bottom: 0;
 
   @media screen and (max-width: 960px) {
+    margin-left: 0;
+    margin-right: 0;
+
     ${TitleStyled} {
       font-size: 1.5rem;
-    }
-
-    ${AddressContainer} {
-      flex-direction: column;
     }
 
     ${AddressStyled} {

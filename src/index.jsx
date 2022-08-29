@@ -1,17 +1,13 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import About from './pages/About';
-import Education from './pages/Education';
-import Experience from './pages/Experience';
-import Home from './pages/Home';
-import Knowledge from './pages/Knowledge';
-import Contact from './pages/Contact';
 import { ThemeProvider } from './utils/context';
 import GlobalStyle from './utils/style/GlobalStyle';
-import Error from './components/Error';
+import ScrollToTop from 'react-scroll-to-top';
+import colors from './utils/style/colors';
+import AnimatedRoutes from './AnimatedRoutes';
 
 const container = document.getElementById('root')
 const root = createRoot(container)
@@ -21,18 +17,12 @@ root.render(
     <Router>
       <ThemeProvider>
         <GlobalStyle />
+
+        <ScrollToTop smooth title='Remonter' style={{background: `${colors.color14}`, zIndex: 20, bottom: "1rem"}} />
         
         <Header />
 
-        <Routes>
-          <Route path='/' element={<Home />}> </Route>
-          <Route path="/formation" element={<Education />}> </Route>
-          <Route path="/competences" element={<Knowledge />}> </Route>
-          <Route path="/experiences" element={<Experience />}> </Route>
-          <Route path="/a_propos" element={<About />}> </Route>
-          <Route path="/contact" element={<Contact />}> </Route>
-          <Route path="/*" element={<Error />}> </Route>
-        </Routes>
+        <AnimatedRoutes />
 
         <Footer />
       </ThemeProvider>

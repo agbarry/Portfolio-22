@@ -39,4 +39,11 @@ export const educationList = [
     level: "Licence",
     year: "2014-2017",
   },
+  {
+    id: 4,
+    name: "Groupe scolaire Victor Hugo de Conakry",
+    department: "Sciences mathématiques",
+    field: "Baccalauréat",
+    year: "2013-2014",
+  }
 ];

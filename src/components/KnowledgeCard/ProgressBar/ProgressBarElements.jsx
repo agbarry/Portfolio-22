@@ -3,30 +3,39 @@ import colors from "../../../utils/style/colors";
 
 /* Mise en forme */
 export const ProgressBarWrapper = styled.ul`
-  display: grid;
-  grid-template-columns: 0.52fr 3.5fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 
-  li {
+  & li {
+    width: 29%;
     line-height: 1.6rem;
   }
 
   @media screen and (max-width: 960px) {
-    grid-template-columns: 0.5fr 2fr;
+    & li {
+      width: 30%;
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    & li {
+      width: 31%;
+      font-size: 0.8rem;
+    }
   }
 `;
 
 export const ProgressBarStyled = styled.li`
-  height: 0.4rem;
-  background: transparent;
-  border-radius: 50px;
   margin-top: 0.8rem;
-  margin-left: 12.5rem;
   position: relative;
 
   &::after {
     content: "";
     position: absolute;
-    background: ${colors.color3};
+    background: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};;
     border-radius: 50px;
     height: 0.5rem;
     width: 0;
@@ -36,6 +45,10 @@ export const ProgressBarStyled = styled.li`
       to {
         width: 100%;
       }
+    }
+
+    @media screen and (max-width: 960px) {
+      height: 0.4rem;
     }
   }
 `;

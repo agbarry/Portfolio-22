@@ -7,7 +7,11 @@ function Footer() {
 
   return (
     <FooterContainer isDarkMode={theme === "dark"}>
-      <span>copyright 2022 by agbarry</span>
+      <span> © 2022 by agbarry</span>
+
+      <p>
+        <q>Toujours voir mieux</q>
+      </p>
     </FooterContainer>
   );
 }

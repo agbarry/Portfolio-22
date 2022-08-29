@@ -1,5 +1,5 @@
 import ProgressBar from "../../components/KnowledgeCard/ProgressBar";
-import { knowledgesList, others, othersKnowledges, toolsList } from "./Data";
+import { global, knowledgesList } from "./Data";
 import {
   KnowledgeContent,
   KnowledgeWrapper,
@@ -7,66 +7,56 @@ import {
   OthersWrapper,
   YearsStyled,
 } from "./KnowledgeElements";
-
+import { FaCheck } from "react-icons/fa";
+import { useContext } from "react";
+import { ThemeContext } from "../../utils/context";
+import { motion } from "framer-motion";
 
 function Knowledge() {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <KnowledgeWrapper>
-      <h2>Langages & frameworks</h2>
-      <KnowledgeContent>
-        <YearsStyled>
-          <h3>Années d'expériences</h3>
+    <motion.div initial={{width: 0}} animate={{width: "100%"}} exit={{width: window.innerWidth, transition: {duration: 0.1}}}>
+      <KnowledgeWrapper isDarkMode={theme === "dark"}>
+        <h2>Langages & frameworks</h2>
+        <KnowledgeContent>
+          <YearsStyled isDarkMode={theme === "dark"}>
+            <h3>Années d'expériences</h3>
+
+            <div>
+              <span> 1an </span>
+              <span> 3ans </span>
+              <span> 5ans </span>
+            </div>
+          </YearsStyled>
 
           <div>
-            <span> 1 an </span>
-            <span> 3 ans </span>
-            <span> 5 ans </span>
+            {knowledgesList.map((knowledge) => (
+              <ProgressBar
+                key={`${knowledge.id}`}
+                name={knowledge.name}
+                xp={knowledge.xp}
+              />
+            ))}
           </div>
-        </YearsStyled>
+        </KnowledgeContent>
 
-        <div>
-          {knowledgesList.map((knowledge) => (
-            <ProgressBar
-              key={`${knowledge.id}`}
-              name={knowledge.name}
-              xp={knowledge.xp}
-            />
-          ))}
-        </div>
-      </KnowledgeContent>
+        <h1>Autres compétences</h1>
+        <OthersWrapper>
+          {global.map((gl) => (
+            <OthersStyled key={`${gl.id}`} isDarkMode={theme === "dark"}>
+              <h2>{gl.name}</h2>
 
-      <OthersWrapper>
-        <OthersStyled>
-          <h2>Autres langages</h2>
-          {others.map((tool) => (
-            <li key={`${tool.id}`}>
-              <i class="fa-solid fa-check"></i>
-              {tool.name}
-            </li>
+              {gl.content.map((competence) => (
+                <li key={`${competence.id}`}>
+                  <FaCheck /> {competence.name}
+                </li>
+              ))}
+            </OthersStyled>
           ))}
-        </OthersStyled>
-
-        <OthersStyled>
-          <h2>IDE & Outils</h2>
-          {toolsList.map((tool) => (
-            <li key={`${tool.id}`}>
-              <i class="fa-solid fa-star"></i>
-              {tool.name}
-            </li>
-          ))}
-        </OthersStyled>
-
-        <OthersStyled>
-          <h2>Autres</h2>
-          {othersKnowledges.map((other) => (
-            <li key={`${other.id}`}>
-              <i class="fa-solid fa-check"></i>
-              {other.name}
-            </li>
-          ))}
-        </OthersStyled>
-      </OthersWrapper>
-    </KnowledgeWrapper>
+        </OthersWrapper>
+      </KnowledgeWrapper>
+    </motion.div>
   );
 }
 

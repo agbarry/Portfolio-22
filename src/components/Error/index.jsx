@@ -1,4 +1,4 @@
-import notFound from '../../assets/images/notFound.svg';
+import notFound from '../../assets/svg/notFound.svg';
 import { ErrorWrapper, StyledImg, StyledMsg } from './ErrorElements';
 
 function Error() {
