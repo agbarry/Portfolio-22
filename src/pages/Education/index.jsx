@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import EducationCard from "../../components/EducationCard";
 import { ThemeContext } from "../../utils/context";
+import { globalData } from "../../utils/data/GlobalData";
+import { StyledIllustrator, StyledPresentation, Wrapper } from "../../utils/style/Global";
 import { educationList } from "./Data";
 import { Content, EducationWrapper, Title } from "./EducationElements";
 
@@ -31,6 +34,18 @@ function Education() {
             />
           ))}
         </Content>
+
+        <Wrapper isDarkMode={theme === 'dark'}>
+          {globalData.map((data) => (
+            data.name !== "Mon parcours" &&
+            <StyledPresentation key={`${data.id}`} title={data.title}>
+              <Link to={data.link}>
+                <h2>Voir {data.name}</h2>
+                <StyledIllustrator src={data.illustrator} alt={data.alt} />
+              </Link>
+            </StyledPresentation>
+          ))}
+        </Wrapper>
       </EducationWrapper>
     </motion.div>
   );

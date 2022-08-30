@@ -3,7 +3,7 @@ import certification from "../../assets/svg/certificate.svg";
 import project from "../../assets/svg/project2.svg";
 
 /* Liste des liens de redirections sur la page d'accueil */
-export const homeLinks = [
+export const globalData = [
   {
     id: 0,
     name: "Mon parcours",

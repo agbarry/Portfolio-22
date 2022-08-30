@@ -11,6 +11,9 @@ import { FaCheck } from "react-icons/fa";
 import { useContext } from "react";
 import { ThemeContext } from "../../utils/context";
 import { motion } from "framer-motion";
+import { StyledIllustrator, StyledPresentation, Wrapper } from "../../utils/style/Global";
+import { globalData } from "../../utils/data/GlobalData";
+import { Link } from "react-router-dom";
 
 function Knowledge() {
   const { theme } = useContext(ThemeContext);
@@ -55,6 +58,18 @@ function Knowledge() {
             </OthersStyled>
           ))}
         </OthersWrapper>
+
+        <Wrapper isDarkMode={theme === 'dark'}>
+          {globalData.map((data) => (
+            data.name !== "Mes compétences" &&
+            <StyledPresentation key={`${data.id}`} title={data.title}>
+              <Link to={data.link}>
+                <h2>Voir {data.name}</h2>
+                <StyledIllustrator src={data.illustrator} alt={data.alt} />
+              </Link>
+            </StyledPresentation>
+          ))}
+        </Wrapper>
       </KnowledgeWrapper>
     </motion.div>
   );

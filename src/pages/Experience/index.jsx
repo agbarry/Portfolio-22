@@ -6,6 +6,9 @@ import { useState } from 'react'
 import { useContext } from 'react'
 import { ThemeContext } from '../../utils/context'
 import { motion } from 'framer-motion';
+import { StyledIllustrator, StyledPresentation, Wrapper } from '../../utils/style/Global'
+import { globalData } from '../../utils/data/GlobalData'
+import { Link } from 'react-router-dom'
 
 
 
@@ -116,6 +119,18 @@ function Experience() {
               ))}
           </Project>
         ))}
+
+        <Wrapper isDarkMode={theme === 'dark'}>
+          {globalData.map((data) => (
+            data.name !== "Mes expériences" &&
+            <StyledPresentation key={`${data.id}`} title={data.title}>
+              <Link to={data.link}>
+                <h2>Voir {data.name}</h2>
+                <StyledIllustrator src={data.illustrator} alt={data.alt} />
+              </Link>
+            </StyledPresentation>
+          ))}
+        </Wrapper>
       </ExperienceWrapper>
     </motion.div>
   )

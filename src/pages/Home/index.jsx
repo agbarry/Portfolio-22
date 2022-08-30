@@ -8,14 +8,12 @@ import {
   HomeWrapperTop,
   HomeContent,
   DescriptionStyled,
-  DownloadCV,
-  HomeWrapperBottom,
-  StyledIllustrator,
-  StyledPresentation,
+  DownloadCV
 } from './HomeElements'
 import { FaDownload } from 'react-icons/fa'
-import { homeLinks } from './Data'
 import { motion } from 'framer-motion'
+import { globalData } from '../../utils/data/GlobalData'
+import { StyledIllustrator, StyledPresentation, Wrapper } from '../../utils/style/Global'
 
 function Home() {
   const { theme } = useContext(ThemeContext)
@@ -57,16 +55,16 @@ function Home() {
           </HomeContent>
         </HomeWrapperTop>
 
-        <HomeWrapperBottom isDarkMode={theme === 'dark'}>
-          {homeLinks.map((home) => (
-            <StyledPresentation key={`${home.id}`} title={home.title}>
-              <Link to={home.link}>
-                <h2>{home.name}</h2>
-                <StyledIllustrator src={home.illustrator} alt={home.alt} />
+        <Wrapper isDarkMode={theme === 'dark'} style={{marginLeft: 0, marginRight: 0}}>
+          {globalData.map((data) => (
+            <StyledPresentation key={`${data.id}`} title={data.title}>
+              <Link to={data.link}>
+                <h2>Voir {data.name}</h2>
+                <StyledIllustrator src={data.illustrator} alt={data.alt} />
               </Link>
             </StyledPresentation>
           ))}
-        </HomeWrapperBottom>
+        </Wrapper>
       </HomeWrapper>
     </motion.div>
   )
