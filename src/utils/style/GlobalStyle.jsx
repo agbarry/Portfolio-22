@@ -6,12 +6,15 @@ import bgLight from '../../assets/images/bg_light.jpg'
 import bgDark from '../../assets/images/bg_dark.jpg'
 import fonts from './fonts'
 
+// `url(${bgDark})` : `url(${bgLight})`};
+
 /* Mise en page globale */
 const StyledGlobalStyle = createGlobalStyle`
     body {
         margin: 0;
-        background-image: ${({ isDarkMode }) =>
-          isDarkMode ? `url(${bgDark})` : `url(${bgLight})`}; 
+        background: ${({ isDarkMode }) =>
+          isDarkMode ? colors.black : colors.white};
+           
         color: ${({ isDarkMode }) =>
           isDarkMode ? colors.white1 : colors.black1};
         font-family: ${fonts.font5}, ${fonts.fontParams};
@@ -36,10 +39,6 @@ const StyledGlobalStyle = createGlobalStyle`
         cursor: pointer;
         color: ${({ isDarkMode }) =>
           isDarkMode ? colors.color5 : colors.color6};
-    
-        /* &:visited {
-            
-        } */
     }
 `
 
