@@ -4,27 +4,27 @@ export const aboutInformation = [
     id: 0,
     date: '2022-2023',
     description:
-      "Master 2 informatique, spécialisation génie logiciel à l'université de Bordeaux(en cours)",
+      "Master 2 informatique, spécialisation génie logiciel -> Université de Bordeaux(en cours)",
   },
 
   {
     id: 1,
     date: '2021-2022',
     description:
-      "Master 1 informatique, spécialisation génie logiciel à l'université de Bordeaux",
+      "Master 1 informatique, spécialisation génie logiciel -> Université de Bordeaux",
   },
 
   {
     id: 2,
     date: '2018-2020',
-    description: "Diplôme de licence informatique à l'université de Bordeaux",
+    description: "Diplôme de licence informatique -> Université de Bordeaux",
   },
 
   {
     id: 3,
     date: '2014-2017',
     description:
-      'Diplôme de licence en Miage à la plus lionne des universités de la capitale( Université Kofi Annan de Guinée)',
+      'Diplôme de licence en Miage -> Université Kofi Annan de Guinée',
   },
 ]
 

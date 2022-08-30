@@ -14,7 +14,7 @@ const colors = {
   color12: "#98b0f0",
   color13: "#443683",
   color14: "#543eb4",
-  white: "#fff",
+  white: "#eee",
   white1: "#fff",
   black: "#222",
   black1: "#000",
