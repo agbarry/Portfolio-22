@@ -36,6 +36,10 @@ export const NavContainer = styled.nav`
     border-bottom: thick double ${({ $isDarkMode }) => ($isDarkMode ? colors.white1 : colors.black1)};
   }
 
+  & .notActive {
+    border-bottom: 0;
+  }
+
   @media screen and (max-width: 1060px) {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
