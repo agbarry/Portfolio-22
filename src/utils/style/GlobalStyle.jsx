@@ -2,8 +2,8 @@ import { useContext } from 'react'
 import { ThemeContext } from '../context'
 import { createGlobalStyle } from 'styled-components'
 import colors from './colors'
-import bgLight from '../../assets/images/bg_light.jpg'
-import bgDark from '../../assets/images/bg_dark.jpg'
+// import bgLight from '../../assets/images/bg_light.jpg'
+// import bgDark from '../../assets/images/bg_dark.jpg'
 import fonts from './fonts'
 
 // `url(${bgDark})` : `url(${bgLight})`};
