@@ -11,7 +11,6 @@ export const FooterContainer = styled.div`
   z-index: 10;
   text-align: center;
   padding: 0.5rem;
-  color: ${({ isDarkMode }) => (isDarkMode ? colors.white : colors.black)};
   ${animeBackground({
     color: colors.color14,
     border: "0px",
@@ -21,10 +20,4 @@ export const FooterContainer = styled.div`
   })}
   
   ${backdropFilter({value: '20rem'})}
-
-  & p {
-    & q {
-      color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
-    }
-  }
 `;

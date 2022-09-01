@@ -1,5 +1,6 @@
 
 const colors = {
+  color0: "#eea058",
   color1: "#7091eb",
   color2: "#6C77F4",
   color3: "#5691b8",

@@ -1,17 +1,14 @@
-import { useContext } from "react";
-import { ThemeContext } from "../../utils/context";
 import { FooterContainer } from "./FooterElements";
 
 function Footer() {
-  const { theme } = useContext(ThemeContext);
 
   return (
-    <FooterContainer isDarkMode={theme === "dark"}>
-      <span> © 2022 by agbarry</span>
+    <FooterContainer>
+       <p>© 2022 by agbarry</p>
 
-      <p>
+      <span>
         <q>Toujours voir mieux</q>
-      </p>
+      </span>
     </FooterContainer>
   );
 }

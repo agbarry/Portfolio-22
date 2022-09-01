@@ -59,7 +59,6 @@ export const YearsStyled = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: ${({ isDarkMode }) => (isDarkMode ? colors.white : colors.black)};
   width: 100%;
 
   & h3 {

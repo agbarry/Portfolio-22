@@ -5,8 +5,7 @@ import {
   AboutContainer,
   BottomContent,
   BottomStyled,
-  Detail,
-  NameStyled,
+  Detail
 } from './AboutElements'
 import { aboutInformation, interest, languages, personalQuality } from './Data'
 // import Typical from "react-typical";
@@ -18,21 +17,15 @@ function About() {
     <motion.div initial={{width: 0}} animate={{width: "100vw"}} exit={{width: window.innerWidth, transition: {duration: 0.1}}}>
     <AboutContainer>
       <div>
-        Coucou, je suis{' '}
-        <NameStyled isDarkMode={theme === 'dark'}> Aguibou Barry</NameStyled>{' '}
+        Coucou, je suis <span> Aguibou Barry </span>
         jeune d'origine guinéen résidant en france précisement à Bordeaux depuis
-        près de 4ans dans le cadre de mes études au sein de la prestigieuse{' '}
-        <NameStyled isDarkMode={theme === 'dark'}>
-          université de Bordeaux
-        </NameStyled>
+        près de 4ans dans le cadre de mes études au sein de la prestigieuse
+        <span> université de Bordeaux </span>
         .
         <ul>
           {aboutInformation.map((about) => (
             <Detail key={`${about.id}`}>
-              <NameStyled isDarkMode={theme === 'dark'}>
-                {about.date} :{' '}
-              </NameStyled>
-              {about.description}.
+              <span>{about.date} : </span>{about.description}.
             </Detail>
           ))}
         </ul>

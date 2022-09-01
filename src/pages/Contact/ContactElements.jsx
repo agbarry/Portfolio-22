@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import colors from "../../utils/style/colors";
 
 /* Mise en forme de la page contact */
 export const TitleStyled = styled.h5`
@@ -17,16 +16,12 @@ export const CardStyled = styled.div`
 `;
 export const AddressContainer = styled.div`
   display: flex;
+  gap: 2rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-transform: lowercase;
-`;
-
-export const AddressStyled = styled.span`
-  padding: 15px;
   font-size: 1.2rem;
-  color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
 `;
 
 export const ContactContainer = styled.div`
@@ -41,12 +36,10 @@ export const ContactContainer = styled.div`
     margin-left: 0;
     margin-right: 0;
 
+    font-size: 1rem;
+
     ${TitleStyled} {
       font-size: 1.5rem;
-    }
-
-    ${AddressStyled} {
-      font-size: 1rem;
     }
   }
 `;

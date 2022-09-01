@@ -10,8 +10,11 @@ import fonts from './fonts'
 
 /* Mise en page globale */
 const StyledGlobalStyle = createGlobalStyle`
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-        margin: 0;
         background: ${({ isDarkMode }) =>
           isDarkMode ? colors.black : colors.white};
            
@@ -21,9 +24,9 @@ const StyledGlobalStyle = createGlobalStyle`
     }
 
     * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;  
+      margin: 0;
+      padding: 0;  
+      box-sizing: border-box;
     }
 
     button {
@@ -37,8 +40,11 @@ const StyledGlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         cursor: pointer;
-        color: ${({ isDarkMode }) =>
-          isDarkMode ? colors.color5 : colors.color6};
+    }
+
+    a, span {
+      color: ${({ isDarkMode }) => 
+      isDarkMode ? colors.color5 : colors.color6};
     }
 `
 

@@ -132,10 +132,6 @@ export const ProjectLanguages = styled.div`
     text-align: right;
     justify-content: right;
 
-    & span {
-      color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
-    }
-
     & p {
       padding-right: 0.4rem;
     };

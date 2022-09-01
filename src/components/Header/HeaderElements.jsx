@@ -74,7 +74,7 @@ export const LogoStyled = styled(Link)`
     2px -4px 5px ${colors.color3}, -2px -6px 6px ${colors.color8},
     0 -8px 7px ${colors.color9}, 1px -9px 8px ${colors.color10};
 
-  span {
+  & span {
     color: ${colors.black1};
   }
 
@@ -94,11 +94,12 @@ export const LogoStyled = styled(Link)`
 `;
 
 export const NightModeButton = styled.button`
+  color: ${colors.color0};
   background-color: transparent;
   border: none;
-  cursor: pointer;
   margin-bottom: 1.5em;
   font-size: 2rem;
+
 
   @media screen and (max-width: 960px) {
     font-size: 1.2rem;

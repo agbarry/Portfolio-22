@@ -41,10 +41,6 @@ export const HomeContent = styled.div`
 export const DescriptionStyled = styled.div`
   font-size: 1.3rem;
 
-  & span {
-    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
-  }
-
   @media screen and (max-width: 960px) {
     font-size: 1.1rem;
   }

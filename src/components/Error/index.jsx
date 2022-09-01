@@ -1,10 +1,7 @@
-import { useContext } from 'react';
 import notFound from '../../assets/svg/notFound.svg';
-import { ThemeContext } from '../../utils/context';
 import { ErrorWrapper, LinkStyled, StyledImg, StyledMsg } from './ErrorElements';
 
 function Error() {
-    const { theme } = useContext(ThemeContext);
 
     return ( 
         <ErrorWrapper>
@@ -12,7 +9,7 @@ function Error() {
 
             <StyledMsg>Oups ! il y a eu un problème </StyledMsg>
 
-            <LinkStyled to="/" title="Accueil" $isDarkMode={theme === 'dark'}>
+            <LinkStyled to="/" title="Revenir à l'accueil">
                 <span>Accueil</span>
             </LinkStyled>
         </ErrorWrapper>

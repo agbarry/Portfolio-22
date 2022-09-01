@@ -1,11 +1,9 @@
-import portrait from "../../assets/images/portrait.jpg";
 import { useContext } from "react";
 import { ThemeContext } from "../../utils/context";
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import {
   ImageStyled,
   JobStyled,
-  NameStyled,
   ProfileWrapper,
   SocialNetworkStyled,
 } from "./ProfileElements";
@@ -17,14 +15,10 @@ function Profile() {
 
   return (
     <ProfileWrapper>
-      <ImageStyled
-        src={portrait}
-        alt="Portrait du profile"
-        isDarkMode={theme === "dark"}
-      />
+      <ImageStyled isDarkMode={theme === "dark"}/>
 
-      <div>
-        <NameStyled> Aguibou BARRY </NameStyled>
+      <div style={{width: 'max-content'}}>
+        <h3> Aguibou BARRY </h3>
 
         <JobStyled isDarkMode={theme === "dark"}>Développeur fullstack</JobStyled>
 
@@ -41,7 +35,7 @@ function Profile() {
 
           <li>
             <a
-              href="https://github.com/agbarry/"
+              href="https://github.com/agbarry"
               target="_blank"
               rel="noopener noreferrer"
             >

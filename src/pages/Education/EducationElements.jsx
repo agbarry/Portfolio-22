@@ -30,10 +30,6 @@ export const Title = styled.div`
   font-family: ${fonts.font6}, ${fonts.fontParams};
   font-size: 2rem;
 
-  & span {
-    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
-  }
-
   @media screen and (max-width: 960px) {
     width: 80%;
     margin-left: 10%;
@@ -106,18 +102,12 @@ export const LogoStyled = styled.img`
   background: transparent;
 `
 
-export const YearStyled = styled.span`
+export const YearStyled = styled.ul`
   grid-area: Y;
   text-align: center;
 
-  & ul {
-    & li {
-      list-style-position: inside;
-      list-style-type: square;
-    }
-  }
-
-  & p {
-    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
+  & li {
+    list-style-position: inside;
+    list-style-type: square;
   }
 `

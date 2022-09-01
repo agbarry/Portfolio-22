@@ -8,7 +8,9 @@ import {
   FaBriefcase,
   FaAddressCard,
   FaHome,
+  FaMoon,
 } from 'react-icons/fa'
+import {BsSunFill} from 'react-icons/bs';
 import { FcAbout } from 'react-icons/fc'
 
 function Header() {
@@ -25,7 +27,7 @@ function Header() {
         onClick={() => toggleTheme()}
         title={'Passez au mode ' + (theme === 'light' ? 'dark' : 'light')}
       >
-        {theme === 'light' ? '☀️' : '🌙'}
+        {theme === 'light' ? <BsSunFill /> : <FaMoon />}
       </NightModeButton>
 
       <nav>
