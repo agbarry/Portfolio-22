@@ -8,14 +8,6 @@ export const TitleStyled = styled.h5`
   text-align: center;
 `
 
-export const CardStyled = styled.div`
-  padding: 15px;
-
-  & iframe {
-    border-radius: 30% 10%;
-  }
-`
-
 export const ContactContainer = styled.div`
   margin: 4rem;
   gap: 1.5rem;
@@ -37,6 +29,7 @@ export const ContactContainer = styled.div`
 `
 
 export const ContactContent = styled.div`
+  margin-bottom: 5rem;
   display: flex;
   gap: 2rem;
   flex-flow: row wrap;
