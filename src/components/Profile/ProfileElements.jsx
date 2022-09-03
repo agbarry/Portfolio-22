@@ -40,7 +40,7 @@ export const ImageStyled = styled.div`
   height: 300px;
   width: 230px;
   justify-self: center;
-  animation: ${profileAnimate} 6s ease-in-out infinite 1s;
+  animation: ${profileAnimate} 6s ease-in-out infinite 2s;
 `
 
 export const JobStyled = styled.h3`

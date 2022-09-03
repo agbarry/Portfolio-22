@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import colors from '../../utils/style/colors'
+import { animeBackground } from '../../utils/style/Global'
 
 /* Mise en forme de la page contact */
 export const TitleStyled = styled.h5`
@@ -48,6 +49,11 @@ export const AddressWrapper = styled.div`
   align-items: center;
   text-transform: lowercase;
   font-size: 1rem;
+
+  & h3 {
+    text-transform: initial;
+    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
+  }
 
   & span {
     color: ${({ isDarkMode }) => (isDarkMode ? colors.color16 : colors.color15)};
@@ -104,7 +110,7 @@ export const HandStyled = styled.div`
   position: absolute;
   margin-top: 1.8rem;
   font-size: 2.5rem;
-  color: ${({ isDarkMode }) => (isDarkMode ? colors.color16 : colors.color15)};
+  color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
   animation: ${handAnimate} 6s ease-in-out infinite 2s;
 `
 
@@ -116,6 +122,10 @@ export const FormWrapper = styled.form`
   gap: 1rem;
   border-radius: 1rem;
   border: thick double ${colors.special};
+
+  & textarea {
+    width: 360px;
+  }
 
   @media screen and (max-width: 640px) {
     width: 420px;
@@ -144,8 +154,18 @@ export const FormContent = styled.div`
 `
 
 export const FormSubmit = styled.button`
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: inherit;
   padding: 0.5rem;
   width: max-content;
   align-self: center;
+  ${animeBackground({
+    color: colors.color14,
+    border: "10px",
+    deg: "-10deg",
+    percent1: "5%",
+    percent2: "70%",
+  })}
 `
 

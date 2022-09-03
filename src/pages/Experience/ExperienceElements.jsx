@@ -4,7 +4,7 @@ import { animeBackground } from "../../utils/style/Global";
 
 /* Mise en forme de la page 'Experience' */
 export const ExperienceWrapper = styled.div`
-  margin: 5rem;
+  margin: 4rem;
   margin-top: 2rem;
   gap: 4rem;
   display: flex;

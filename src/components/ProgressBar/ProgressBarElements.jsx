@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "../../../utils/style/colors";
+import colors from "../../utils/style/colors";
 
 /* Mise en forme */
 export const ProgressBarWrapper = styled.ul`

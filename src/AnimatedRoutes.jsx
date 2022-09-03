@@ -4,7 +4,7 @@ import Experience from './pages/Experience';
 import Home from './pages/Home';
 import Knowledge from './pages/Knowledge';
 import Contact from './pages/Contact';
-import Error from './components/Error';
+import Error from './pages/Error';
 import About from "./pages/About";
 import { AnimatePresence } from "framer-motion";
 

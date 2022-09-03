@@ -7,7 +7,7 @@ import { animeBackground } from '../../utils/style/Global'
 export const EducationWrapper = styled.div`
   margin: 1rem;
   margin-top: 4rem;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;

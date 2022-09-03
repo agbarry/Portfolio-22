@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../utils/context";
-import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaDiscord } from 'react-icons/fa';
 import {
   ImageStyled,
   JobStyled,
@@ -45,11 +45,11 @@ function Profile() {
 
           <li>
             <a
-              href="https://github.com/agbarry/"
+              href="https://discord.com/channels/Agb#2386"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTwitter style={{width: '25px', height: '25px'}}/>
+              <FaDiscord style={{width: '25px', height: '25px'}}/>
             </a>
           </li>
         </SocialNetworkStyled>

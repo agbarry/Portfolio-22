@@ -8,7 +8,7 @@ import { ThemeContext } from '../../utils/context'
 function ContactForm() {
   const { theme } = useContext(ThemeContext)
   const [result, setResult] = useState(false)
-  const [succes, setSucces] = useState(false)
+  const [succes, setSucces] = useState(true)
   const form = useRef()
 
   const sendEmail = (e) => {
@@ -23,14 +23,15 @@ function ContactForm() {
       )
       .then(
         (result) => {
-          setSucces(true)
+          setSucces(true);
+          setResult(true);
         },
         (error) => {
-          setSucces(false)
+          setSucces(false);
+          setResult(true);
         }
       )
     e.target.reset()
-    setResult(true)
   }
 
   setTimeout(() => {
@@ -39,9 +40,7 @@ function ContactForm() {
 
   return (
     <ContactFormWrapper isDarkMode={theme === "dark"}>
-      <h3>
-        Écrivez-moi ci-dessous
-      </h3>
+      <h3> Me contacter directement ici !</h3>
 
       <HandStyled  isDarkMode={theme === "dark"}> <FaHandPointDown /> </HandStyled>
 
@@ -100,7 +99,6 @@ function ContactForm() {
 
           <textarea
             name="message"
-            cols="50"
             rows="10"
             placeholder="Votre message"
             required

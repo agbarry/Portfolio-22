@@ -26,22 +26,27 @@ function Home() {
 
           <HomeContent>
             <DescriptionStyled isDarkMode={theme === 'dark'}>
-              Détenteur d'une double licence(<span>Miage</span> et <span>Informatique</span>)
+              Détenteur d'une double licence (<span>Miage</span> et <span>Informatique</span>)
               et actuellement en dernière année de <span>master informatique </span> 
-              parcours <span>génie logiciel</span> à la prestigieuse universté de
+              parcours <span>génie logiciel</span> à la prestigieuse université de
               Bordeaux, je suis à la recherche d'un
               <span> stage </span> en <span>développement logiciel</span>, qui commencera le
               <span> 1er avril 2023</span>, pour une durée de <span>6 mois</span>.
               Ce stage me permettra de mettre en pratique mes acquis durant mon
               cycle universitaire et aussi de découvrir le monde professionnel.
-              Par la même occasion si tout se passe bien je serai très ravi d'un
-              contrat(CDI) 😍 pour une éventuelle montée en compétences.
-              Rassurez-vous que je mettrai en oeuvre tout mon potentiel pour que
-              ça se passe bien car le dynamisme, la motivation, l'organisation,
+              Par la même occasion, si tout se passe bien, je serai très ravi d'un
+              contrat 😍 pour une éventuelle montée en compétences.
+              Rassurez-vous que je mettrai en œuvre tout mon potentiel pour que
+              ça se passe bien, car durant mon parcours de formation, j'ai su allier
+               étude et travail sans que cela influe sur mes résultats même si je ne suis 
+              probablement pas parmi le lot des meilleurs, mais ce qui reste sur ce que je remplis toujours 
+              ma part de travail que ce soit individuellement ou collectivement.
+              {/* permit d'être autonome et aussi de pouvoir 
+               travailler en équipe.  le dynamisme, la motivation, l'organisation,
               l'autonomie, l'esprit d'équipe et sans oublié le côté humain définit
               ma personnalité et cela ne m'a jamais manquer durant mes différents
-              projets universitaires et aussi mes expériences professionnelles.
-              <br />
+              projets universitaires et aussi mes expériences professionnelles. */}
+              <br /> <br />
               Disponible et ouvert à toute proposition, pour toute question ou
               autres choses, n'hésitez pas à me contacter et c'est par
               <Link to="/contact"> ici</Link>.

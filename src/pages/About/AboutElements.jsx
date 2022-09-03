@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 
 export const AboutContainer = styled.div`
+  margin: 4rem;
   display: flex;
   gap: 4rem;
   flex-flow: column wrap;
   user-select: none;
   font-size: 1.3rem;
-  margin: 4rem;
 
   @media screen and (max-width: 960px) {
     margin-left: 1rem;

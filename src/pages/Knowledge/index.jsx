@@ -1,4 +1,4 @@
-import ProgressBar from "../../components/KnowledgeCard/ProgressBar";
+import ProgressBar from "../../components/ProgressBar";
 import { global, knowledgesList } from "./Data";
 import {
   KnowledgeContent,

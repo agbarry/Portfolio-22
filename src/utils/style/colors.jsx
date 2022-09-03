@@ -16,7 +16,7 @@ const colors = {
   color13: "#443683",
   color14: "#543eb4",
   color15: "#7c5f47",
-  color16: "#dfc8b6",
+  color16: "#ecdbb7",
   white: "#eee",
   white1: "#fff",
   black: "#222",
