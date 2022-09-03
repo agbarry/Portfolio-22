@@ -48,7 +48,7 @@ function Contact() {
                 <FaWhatsapp /> 
                 <h4>Whatsapp</h4>
                 {/* <span>07-51-56-86-53</span> */}
-                <a href='https://api.whatsapp.com/send?phone=0751568653&text=Bonjour !'>Ecrivez-moi <HiArrowRight /></a>
+                <a href='https://api.whatsapp.com/send?phone=+33751568653&text=Bonjour !'>Ecrivez-moi <HiArrowRight /></a>
               </AddressContent>
 
               <AddressContent>
