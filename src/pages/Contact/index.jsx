@@ -40,9 +40,9 @@ function Contact() {
             <AddressContent>
               <FiMail />
               <h4>Email</h4>
-              <span>aguiboubarry73@gmail.com </span>
+              <span>agbarry73@gmail.com </span>
               <a
-                href="mailto:aguiboubarry73@gmail.com"
+                href="mailto:agbarry73@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >

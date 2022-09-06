@@ -48,8 +48,8 @@ function Home() {
               projets universitaires et aussi mes expériences professionnelles. */}
               <br /> <br />
               Disponible et ouvert à toute proposition, pour toute question ou
-              autres choses, n'hésitez pas à me contacter et c'est par
-              <Link to="/contact"> ici</Link>.
+              autres choses, n'hésitez pas à me contacter (<Link to="/contact" title='Contactez-moi'>par ici</Link>), je 
+              me tiendrai à votre disposition dans l'eventualité d'un entretien.
             </DescriptionStyled>
 
             <DownloadCV isDarkMode={theme === 'dark'} title="Télécharger mon CV">

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { ContactFormWrapper, FormContent, FormSubmit, FormWrapper, HandStyled } from '../../pages/Contact/ContactElements'
-import { FaHandPointDown } from 'react-icons/fa'
+import { Confirmation, ContactFormWrapper, FormContent, FormSubmit, FormWrapper, HandStyled } from '../../pages/Contact/ContactElements'
+import { FaCheck, FaHandPointDown, FaTimes } from 'react-icons/fa'
 import { useContext } from 'react'
 import { ThemeContext } from '../../utils/context'
 
@@ -108,18 +108,21 @@ function ContactForm() {
         <FormSubmit type="submit"> Envoyer </FormSubmit>
       </FormWrapper>
 
-      <div>
+      <Confirmation>
         {result && (
           succes ? (
-            <p>
-              Votre message a été envoyer avec succès, je reviendrai vers vous
-              dès que possible !
+            <p className='active'>
+              <FaCheck className='icon'/>
+              Succès, je reviendrai vers vous dès que possible !
             </p>
           ) : (
-            <p>Erreur, veuillez reéssayer ulterieurement</p>
+            <p className='notActive'>
+              <FaTimes className='icon'/>
+              Erreur, veuillez réessayer ultérieurement !
+            </p>
           )
         )}
-      </div>
+      </Confirmation>
     </ContactFormWrapper>
   )
 }

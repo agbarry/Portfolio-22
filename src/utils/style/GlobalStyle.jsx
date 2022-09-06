@@ -2,11 +2,7 @@ import { useContext } from 'react'
 import { ThemeContext } from '../context'
 import { createGlobalStyle } from 'styled-components'
 import colors from './colors'
-// import bgLight from '../../assets/images/bg_light.jpg'
-// import bgDark from '../../assets/images/bg_dark.jpg'
 import fonts from './fonts'
-
-// `url(${bgDark})` : `url(${bgLight})`};
 
 /* Mise en page globale */
 const StyledGlobalStyle = createGlobalStyle`
@@ -15,9 +11,10 @@ const StyledGlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: ${({ isDarkMode }) =>
-          isDarkMode ? colors.black : colors.white};
-           
+        margin: auto;
+        max-width: 1536px;
+        background-color: ${({ isDarkMode }) =>
+          isDarkMode ? colors.black : colors.white};   
         color: ${({ isDarkMode }) =>
           isDarkMode ? colors.white1 : colors.black1};
         font-family: ${fonts.font5}, ${fonts.fontParams};
@@ -44,7 +41,7 @@ const StyledGlobalStyle = createGlobalStyle`
 
     a, span {
       color: ${({ isDarkMode }) => 
-      isDarkMode ? colors.color5 : colors.color6};
+      isDarkMode ? colors.color2 : colors.color3};
     }
 `
 

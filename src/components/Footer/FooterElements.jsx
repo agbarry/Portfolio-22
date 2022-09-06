@@ -5,15 +5,15 @@ import { animeBackground, backdropFilter } from "../../utils/style/Global";
 /* Mise en forme du "Footer" */
 export const FooterContainer = styled.div`
   position: fixed;
-  left: 0;
   bottom: 0;
+  max-width: 1536px;
   width: 100%;
   z-index: 10;
   text-align: center;
   padding: 0.5rem;
   ${animeBackground({
-    color: colors.color14,
-    border: "0px",
+    color: colors.color6,
+    border: "0",
     deg: "5deg",
     percent1: "5%",
     percent2: "50%",

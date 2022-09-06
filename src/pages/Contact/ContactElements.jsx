@@ -11,8 +11,8 @@ export const TitleStyled = styled.h5`
 
 export const ContactContainer = styled.div`
   margin: 4rem;
-  gap: 1.5rem;
   display: flex;
+  gap: 1.5rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -52,11 +52,11 @@ export const AddressWrapper = styled.div`
 
   & h3 {
     text-transform: initial;
-    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
+    color: ${({ isDarkMode }) => (isDarkMode ? colors.color2 : colors.color3)};
   }
 
   & span {
-    color: ${({ isDarkMode }) => (isDarkMode ? colors.color16 : colors.color15)};
+    color: ${({ isDarkMode }) => (isDarkMode ? colors.color8 : colors.color7)};
   }
 
   @media screen and (max-width: 440px) {
@@ -92,11 +92,11 @@ export const ContactFormWrapper = styled.div`
   
   & h3 {
     text-align: center;
-    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
+    color: ${({ isDarkMode }) => (isDarkMode ? colors.color2 : colors.color3)};
   }
 
   & span {
-    color: ${colors.color11};
+    color: ${colors.color5};
   }
 `
 
@@ -110,7 +110,7 @@ export const HandStyled = styled.div`
   position: absolute;
   margin-top: 1.8rem;
   font-size: 2.5rem;
-  color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
+  color: ${({ isDarkMode }) => (isDarkMode ? colors.color2 : colors.color3)};
   animation: ${handAnimate} 6s ease-in-out infinite 2s;
 `
 
@@ -161,11 +161,50 @@ export const FormSubmit = styled.button`
   width: max-content;
   align-self: center;
   ${animeBackground({
-    color: colors.color14,
+    color: colors.color6,
     border: "10px",
     deg: "-10deg",
     percent1: "5%",
     percent2: "70%",
   })}
+`
+
+export const Confirmation = styled.div`
+  position: fixed;
+  bottom: 4rem;
+  text-align: center;
+  width: fit-content;
+
+  & p {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+
+    & .icon {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 640px) {
+      font-size: 0.6rem;
+
+      & .icon {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  
+  & .active {
+    background-color: ${colors.color10};
+    color: ${colors.green};
+  }
+
+  & .notActive {
+    background-color: ${colors.color9};
+    color: ${colors.red};
+  }
 `
 

@@ -5,7 +5,8 @@ import {
   AboutContainer,
   BottomContent,
   BottomStyled,
-  Detail
+  Detail,
+  TopStyled
 } from './AboutElements'
 import { aboutInformation, interest, languages, personalQuality } from './Data'
 // import Typical from "react-typical";
@@ -16,12 +17,14 @@ function About() {
   return (
     <motion.div initial={{width: 0}} animate={{width: "100vw"}} exit={{width: window.innerWidth, transition: {duration: 0.1}}}>
     <AboutContainer>
-      <div>
-        Coucou, je suis <span> Aguibou Barry </span>
-        jeune d'origine guinéen résidant en france précisement à Bordeaux depuis
-        près de 4ans dans le cadre de mes études au sein de la prestigieuse
-        <span> université de Bordeaux </span>
-        .
+      <TopStyled>
+        <p>
+          Coucou, je suis <span> Aguibou Barry </span>
+          jeune d'origine guinéen résidant en france précisement à Bordeaux depuis
+          près de 4ans dans le cadre de mes études au sein de la prestigieuse
+          <span> université de Bordeaux. </span>
+        </p>
+        
         <ul>
           {aboutInformation.map((about) => (
             <Detail key={`${about.id}`}>
@@ -29,7 +32,7 @@ function About() {
             </Detail>
           ))}
         </ul>
-      </div>
+      </TopStyled>
 
       <BottomStyled>
         {interest.map((interest) => (

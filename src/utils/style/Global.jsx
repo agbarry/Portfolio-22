@@ -38,7 +38,7 @@ export const StyledPresentation = styled.div`
   text-transform: uppercase;
 
   ${animeBackground({
-    color: colors.color14,
+    color: colors.color6,
     border: '10px',
     deg: '-55deg',
     percent1: '5%',

@@ -35,7 +35,7 @@ export const ImageStyled = styled.div`
   background-position: center;
   background-size: cover;
   border-radius: 80% 10% 80% 10% / 60% 70% 90% 80%;
-  box-shadow: 0 0 0 4px ${colors.color14}, 0 0 0 8px ${colors.color5},
+  box-shadow: 0 0 0 4px ${colors.color6}, 0 0 0 8px ${colors.color2},
     0 0 0 12px ${({ isDarkMode }) => (isDarkMode ? colors.black : colors.white)};
   height: 300px;
   width: 230px;
@@ -46,7 +46,7 @@ export const ImageStyled = styled.div`
 export const JobStyled = styled.h3`
   font-size: 1.2rem;
   padding-top: 1rem;
-  color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
+  color: ${({ isDarkMode }) => (isDarkMode ? colors.color2 : colors.color3)};
 `
 
 export const SocialNetworkStyled = styled.ul`
@@ -58,7 +58,7 @@ export const SocialNetworkStyled = styled.ul`
 
     & a {
       ${animeBackground({
-        color: colors.color14,
+        color: colors.color6,
         border: '25px',
         deg: '-7deg',
         percent1: '5%',

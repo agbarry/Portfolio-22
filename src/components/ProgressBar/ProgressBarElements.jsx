@@ -35,7 +35,7 @@ export const ProgressBarStyled = styled.li`
   &::after {
     content: "";
     position: absolute;
-    background: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
+    background: ${({ isDarkMode }) => (isDarkMode ? colors.color2 : colors.color3)};
     border-radius: 50px;
     height: 0.5rem;
     width: 0;

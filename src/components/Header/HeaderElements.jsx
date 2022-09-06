@@ -19,12 +19,14 @@ export const NavContainer = styled.nav`
   text-align: center;
   text-transform: uppercase;
   ${animeBackground({
-    color: colors.color14,
+    color: colors.color6,
     border: "15px",
     deg: "5deg",
     percent1: "5%",
     percent2: "50%",
   })}
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 
   ${backdropFilter({value: '20rem'})}
 
@@ -68,11 +70,11 @@ export const LogoStyled = styled(Link)`
   font-family: ${fonts.font3}, ${fonts.fontParams};
   font-size: 4rem;
   text-transform: capitalize;
-  text-shadow: 0 0 2px ${({ $isDarkMode }) => ($isDarkMode ? colors.color6 : colors.color5)},
-    1px -1px 3px ${colors.color7},
-    -2px -2px 4px ${({ $isDarkMode }) => ($isDarkMode ? colors.color5 : colors.color6)},
-    2px -4px 5px ${colors.color3}, -2px -6px 6px ${colors.color8},
-    0 -8px 7px ${colors.color9}, 1px -9px 8px ${colors.color10};
+  text-shadow: 0 0 2px ${({ $isDarkMode }) => ($isDarkMode ? colors.color3 : colors.color2)},
+    1px -1px 3px ${colors.color5},
+    -2px -2px 4px ${({ $isDarkMode }) => ($isDarkMode ? colors.color2 : colors.color3)},
+    2px -4px 5px ${colors.color2}, -2px -6px 6px ${colors.color1},
+    0 -8px 7px ${colors.color4}, 1px -9px 8px ${colors.color3};
 
   & span {
     color: ${colors.black1};

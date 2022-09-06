@@ -13,7 +13,7 @@ export const KnowledgeWrapper = styled.div`
   }
 
   & h2 {
-    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
+    color: ${({ isDarkMode }) => (isDarkMode ? colors.color2 : colors.color3)};
     font-size: 1.8rem;
   }
 
@@ -45,7 +45,7 @@ export const KnowledgeContent = styled.div`
   padding-left: 1rem;
 
   ${animeBackground({
-    color: colors.color14,
+    color: colors.color6,
     border: '20px',
     deg: '-7deg',
     percent1: '5%',
@@ -153,7 +153,7 @@ export const OthersWrapper = styled.div`
 
 export const OthersStyled = styled.ul`
   ${animeBackground({
-    color: colors.color14,
+    color: colors.color6,
     border: '20px',
     deg: '-7deg',
     percent1: '5%',
@@ -163,6 +163,6 @@ export const OthersStyled = styled.ul`
 
   & h2 {
     padding-bottom: 0.8rem;
-    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
+    color: ${({ isDarkMode }) => (isDarkMode ? colors.color2 : colors.color3)};
   }
 `

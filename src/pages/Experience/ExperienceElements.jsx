@@ -11,7 +11,7 @@ export const ExperienceWrapper = styled.div`
   flex-direction: column;
 
   & li {
-    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
+    color: ${({ isDarkMode }) => (isDarkMode ? colors.color2 : colors.color3)};
     cursor: pointer;
   }
 
@@ -28,7 +28,7 @@ export const ExperienceWrapper = styled.div`
 `;
 
 export const Project = styled.div`
-  border-bottom: 1mm ridge ${colors.color14};
+  border-bottom: 1mm ridge ${colors.color6};
   padding-bottom: 1rem;
   gap: 2rem;
   display: flex;
@@ -61,10 +61,10 @@ export const Project = styled.div`
 
 export const CardsWrapper = styled.div`
   padding: 0.5rem;
-  border: thick double ${colors.color14};
+  border: thick double ${colors.color6};
   border-bottom: none;
   ${animeBackground({
-    color: colors.color14,
+    color: colors.color6,
     border: "20px",
     deg: "-7deg",
     percent1: "5%",
@@ -79,7 +79,7 @@ export const ProjectHead = styled.div`
   font-size: 1.5rem;
 
   & h4 {
-    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
+    color: ${({ isDarkMode }) => (isDarkMode ? colors.color2 : colors.color3)};
   }
 
   @media screen and (max-width: 960px) {
@@ -153,7 +153,7 @@ export const ProjectDocuments = styled.ul`
 
     a {
       ${animeBackground({
-        color: colors.color14,
+        color: colors.color6,
         border: "10px",
         deg: "-10deg",
         percent1: "5%",
@@ -162,10 +162,10 @@ export const ProjectDocuments = styled.ul`
       color: ${({ isDarkMode }) => (isDarkMode ? colors.white1 : colors.black1)};
 
       padding: 0.8rem 0.8rem;
-      box-shadow: 0 0 2px ${colors.color7}, 1px -1px 3px ${colors.color8},
-        -2px -2px 4px ${colors.color6}, 2px -4px 5px ${colors.color4},
-        -2px -6px 6px ${colors.color9}, 0 -8px 7px ${colors.color10},
-        1px -9px 8px ${colors.color11};
+      box-shadow: 0 0 2px ${colors.color5}, 1px -1px 3px ${colors.color1},
+        -2px -2px 4px ${colors.color3}, 2px -4px 5px ${colors.color1},
+        -2px -6px 6px ${colors.color4}, 0 -8px 7px ${colors.color3},
+        1px -9px 8px ${colors.color5};
 
       transition: 0.2s ease;
 

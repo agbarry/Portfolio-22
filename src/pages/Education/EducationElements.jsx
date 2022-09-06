@@ -60,7 +60,7 @@ export const EducationCardWrapper = styled.div`
   border-right: thick double;
 
   ${animeBackground({
-    color: colors.color14,
+    color: colors.color6,
     border: '20px',
     deg: '-7deg',
     percent1: '2%',
@@ -91,7 +91,7 @@ export const InfosContainer = styled.div`
 
   & h2, & h6 {
     font-size: 1.4rem;
-    color: ${({ isDarkMode }) => (isDarkMode ? colors.color5 : colors.color6)};
+    color: ${({ isDarkMode }) => (isDarkMode ? colors.color2 : colors.color3)};
   }
 `
 

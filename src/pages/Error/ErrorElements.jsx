@@ -37,8 +37,8 @@ export const LinkStyled = styled(Link)`
     width: 110px;
     padding: 1rem;
     border-radius: 2rem;
-    border-top: thick double ${colors.color14};
-    border-bottom: thick double ${colors.color14};
+    border-top: thick double ${colors.color6};
+    border-bottom: thick double ${colors.color6};
     font-size: 1.5rem;
     justify-self: center;
     text-align: center;

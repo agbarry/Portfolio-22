@@ -1,13 +1,13 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import { ThemeProvider } from './utils/context';
-import GlobalStyle from './utils/style/GlobalStyle';
-import ScrollToTop from 'react-scroll-to-top';
-import colors from './utils/style/colors';
-import AnimatedRoutes from './AnimatedRoutes';
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter as Router } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import { ThemeProvider } from './utils/context'
+import GlobalStyle from './utils/style/GlobalStyle'
+import ScrollToTop from 'react-scroll-to-top'
+import colors from './utils/style/colors'
+import AnimatedRoutes from './AnimatedRoutes'
 
 const container = document.getElementById('root')
 const root = createRoot(container)
@@ -18,8 +18,16 @@ root.render(
       <ThemeProvider>
         <GlobalStyle />
 
-        <ScrollToTop smooth title='Remonter' style={{background: `${colors.color14}`, zIndex: 20, bottom: "1rem"}} />
-        
+        <ScrollToTop
+          smooth
+          title="Remonter"
+          style={{
+            background: `${colors.color6}`,
+            zIndex: 20,
+            bottom: '1rem'
+          }}
+        />
+
         <Header />
 
         <AnimatedRoutes />
@@ -29,4 +37,3 @@ root.render(
     </Router>
   </React.StrictMode>
 )
-
