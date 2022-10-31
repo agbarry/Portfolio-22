@@ -6,7 +6,7 @@ import project from '../../assets/svg/project2.svg'
 export const globalData = [
   {
     id: 0,
-    name: 'Mon parcours',
+    name: 'Parcours',
     link: '/formation',
     illustrator: graduation,
     title:
@@ -16,7 +16,7 @@ export const globalData = [
 
   {
     id: 1,
-    name: 'Mes compétences',
+    name: 'Compétences',
     link: '/competences',
     illustrator: certification,
     title:
@@ -26,7 +26,7 @@ export const globalData = [
 
   {
     id: 2,
-    name: 'Mes expériences',
+    name: 'Expériences',
     link: '/experiences',
     illustrator: project,
     title:
