@@ -16,7 +16,7 @@ export const AboutWrapper = styled.div`
   }
 
   @media screen and (max-width: 960px) {
-    flex-flow: column wrap;
+    flex-flow: column-reverse wrap;
   }
 `
 
@@ -39,7 +39,6 @@ export const TopStyled = styled.div`
 
   @media screen and (max-width: 960px) {
     margin-left: 1rem;
-    margin-right: 1rem;
   }
 `
 
