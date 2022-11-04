@@ -75,8 +75,10 @@ const experienceList = [
     projectName: 'Bacchanator',
     entrepriseName: 'Université de Bordeaux',
     projectTitle:
-      "Né suite à l'appel à projet du musée des beaux-arts de Bordeaux. Inspiré du jeu Akinator, ce jeu permet de deviner une oeuvre " +
-      "du musée des beaux-arts de Bordeaux à travers une serie de questions posées à l'utilisateur.",
+      "Conception d’une application web suite à l'appel à projet du musée des beaux-arts de " +
+      "Bordeaux pour valoriser ses œuvres. Inspiré du jeu Akinator, ce jeu permet de deviner une "+
+      "œuvre du musée à travers une série de questions portant sur les caractéristiques de ladite "+
+      "œuvre posées à l'utilisateur.",
     description: [
       'Participation au choix du jeu à réaliser',
       'Élaboration du cahier des charges',
@@ -208,7 +210,7 @@ const othersExperiences = [
     projectName: 'Facteur',
     entrepriseName: 'La Poste de Mériadeck',
     projectTitle:
-      "Mission d'interim en tant que Facteur(Agent de collecte) chez la Poste de Mérideck(Bordeaux), débutant " +
+      "Mission d'interim en tant que Facteur(Agent de collecte) à la Poste de Mérideck(Bordeaux), débutant " +
       'en fin juillet 2022 pour une durée de 1 mois',
     description: [
       'Collecte et distribution de courriers en voiture',

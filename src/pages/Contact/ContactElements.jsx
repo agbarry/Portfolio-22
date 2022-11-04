@@ -20,12 +20,6 @@ export const ContactContainer = styled.div`
   @media screen and (max-width: 960px) {
     margin-left: 0;
     margin-right: 0;
-
-    font-size: 1rem;
-
-    ${TitleStyled} {
-      font-size: 1.5rem;
-    }
   }
 `
 
@@ -44,7 +38,7 @@ export const ContactContent = styled.div`
 
 export const AddressWrapper = styled.div`
   display: flex;
-  row-gap: 1rem;
+  gap: 2rem;
   flex-direction: column;
   align-items: center;
   text-transform: lowercase;
@@ -57,21 +51,29 @@ export const AddressWrapper = styled.div`
 
   & span {
     color: ${({ isDarkMode }) => (isDarkMode ? colors.color8 : colors.color7)};
+    font-size: 0.8rem;
   }
 
   @media screen and (max-width: 440px) {
     font-size: 0.9rem;
   }
 `
+
+export const Content = styled.div`
+  display: flex;
+  gap: 2rem;
+  flex-flow: column nowrap;
+`
+
 const linkAnimate = keyframes`
   0% { letter-spacing: normal; }
   50% { letter-spacing: 2px  }
   100% { letter-spacing: normal; }
 `
 
-export const AddressContent = styled.div`
+export const Address = styled.div`
   padding: 0.5rem;
-  min-width: 300px;
+  min-width: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,7 +98,7 @@ export const ContactFormWrapper = styled.div`
   }
 
   & span {
-    color: ${colors.color5};
+    color: ${colors.red};
   }
 `
 

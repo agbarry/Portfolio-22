@@ -4,7 +4,6 @@ const colors = {
   color1: "#4FEDD2",
   color2: "#13A3F4",
   color3: "#0755CA",
-  color4: "#c054ae",
   color5: "#ec3d08",
   color6: "#543eb4",
   color7: "#7c5f47",

@@ -3,22 +3,21 @@
 */
 export const knowledgesList = [
   { id: 0, name: "Java", xp: 4.2 },
-  { id: 1, name: "C", xp: 3.8 },
-  { id: 2, name: "C++", xp: 3.0 },
-  { id: 3, name: "Python", xp: 2.6 },
-  { id: 4, name: "Javascript", xp: 1.6 },
-  { id: 5, name: "React", xp: 1.0 },
-  { id: 6, name: "Django", xp: 1.2 },
-  { id: 7, name: "Spring Boot", xp: 0.6 },
-  { id: 8, name: "Angular", xp: 0.6 },
-  { id: 9, name: "Php", xp: 2.0 },
+  { id: 1, name: "JavaScript", xp: 2.1 },
+  { id: 2, name: "React", xp: 1.5 },
+  { id: 3, name: "Node Js", xp: 1.1 },
+  { id: 4, name: "Angular", xp: 0.8 },
+  { id: 5, name: "Django", xp: 1.2 },
+  { id: 6, name: "Spring Boot", xp: 0.6 },
+  { id: 7, name: "Python", xp: 2.6 },
+  { id: 8, name: "C/ C++", xp: 3.8 },
 ];
 
 
 
 /* Autres listes de languages/frameworks */
 const web = [
-  { id: 0, name: "Html" },
+  { id: 0, name: "Html 5" },
   { id: 1, name: "CSS" },
   { id: 2, name: "CSS-in-JS" },
   { id: 3, name: "SCSS" },
@@ -48,10 +47,9 @@ const toolsList = [
 
 /* Autres compétences en développement */
 const othersKnowledges = [
-  { id: 0, name: "MySql" },
-  { id: 1, name: "Ocaml" },
-  { id: 2, name: "Salesforce" },
-  { id: 3, name: "Pack Office" },
+  { id: 0, name: "Scrum" },
+  { id: 1, name: "Trello" },
+  { id: 2, name: "Jira" }
 ];
 
 
@@ -60,7 +58,7 @@ const othersKnowledges = [
 */
 export const global = [
   { id: 0, name: "Web", content: web },
-  { id: 1, name: "Programmation parallèle", content: parallel },
-  { id: 2, name: "Autres", content: othersKnowledges },
+  { id: 1, name: "Gestion de projet", content: othersKnowledges },
+  { id: 2, name: "Programmation parallèle", content: parallel },
   { id: 3, name: "IDE & Outils", content: toolsList },
 ];

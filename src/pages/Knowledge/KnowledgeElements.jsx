@@ -86,7 +86,7 @@ export const YearsStyled = styled.div`
           background: ${({ isDarkMode }) =>
             isDarkMode ? colors.white : colors.black};
           position: absolute;
-          height: 16rem;
+          height: 14.5rem;
           width: 1px;
         }
       }

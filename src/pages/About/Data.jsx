@@ -2,26 +2,19 @@
 export const aboutInformation = [
   {
     id: 0,
-    date: '2022-2023',
+    date: '2021-2023',
     description:
-      "Master 2 informatique, spécialisation génie logiciel -> Université de Bordeaux(en cours)",
+      "Master informatique (génie logiciel) -> Université de Bordeaux(en cours)",
   },
 
   {
     id: 1,
-    date: '2021-2022',
-    description:
-      "Master 1 informatique, spécialisation génie logiciel -> Université de Bordeaux",
-  },
-
-  {
-    id: 2,
     date: '2018-2020',
     description: "Diplôme de licence informatique -> Université de Bordeaux",
   },
 
   {
-    id: 3,
+    id: 2,
     date: '2014-2017',
     description:
       'Diplôme de licence en Miage -> Université Kofi Annan de Guinée',
@@ -33,27 +26,16 @@ const interestList = [
   {
     id: 0,
     title: 'Lecture',
-    description: [{ id: 0, name: 'Développement personnel' }],
   },
 
   {
     id: 1,
-    title: 'Sport',
-    description: [
-      { id: 0, name: 'Football' },
-      { id: 1, name: 'Cyclisme' },
-    ],
+    title: 'Sport(Football, Couse à pied)',
   },
 
   {
     id: 2,
-    title: 'Vie associative',
-    description: [
-      {
-        id: 0,
-        name: 'AGEEBS',
-      },
-    ],
+    title: 'Vie associative(AGEEBS)'
   },
 ]
 
@@ -67,7 +49,7 @@ const languagesList = [
 
   { id: 1, name: 'Français', level: 'Billingue' },
 
-  { id: 2, name: 'Anglais', level: 'Débutant' },
+  { id: 2, name: 'Anglais', level: 'Élémentaire' },
 ]
 
 export const languages = [{ id: 0, title: 'Langues', content: languagesList }]
@@ -79,10 +61,11 @@ export const personalQuality = [
     title: 'Qualités personnelles',
     content: [
       { id: 0, name: 'Dynamique' },
-      { id: 1, name: 'Motivé' },
-      { id: 2, name: 'Organisé' },
-      { id: 3, name: 'Autonome' },
-      { id: 4, name: "Esprit d'équipe" },
+      { id: 1, name: 'Organisé' },
+      { id: 2, name: 'Autonome' },
+      { id: 3, name: "Esprit d'équipe" },
+      { id: 4, name: "Forte capacité d'adaptation" },
+      { id: 5, name: "Sociable" },
     ],
   },
 ]

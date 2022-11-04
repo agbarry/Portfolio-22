@@ -64,7 +64,7 @@ function Home() {
           {globalData.map((data) => (
             <StyledPresentation key={`${data.id}`} title={data.title}>
               <Link to={data.link}>
-                <h2>Voir {data.name}</h2>
+                <h2>{data.name}</h2>
                 <StyledIllustrator src={data.illustrator} alt={data.alt} />
               </Link>
             </StyledPresentation>

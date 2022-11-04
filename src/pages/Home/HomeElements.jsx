@@ -63,7 +63,7 @@ export const DownloadCV = styled.div`
     padding: 0.8rem;
     box-shadow: 0 0 2px ${colors.color5}, 1px -1px 3px ${colors.color1},
       -2px -2px 4px ${colors.color3}, 2px -4px 5px ${colors.color1},
-      -2px -6px 6px ${colors.color4}, 0 -8px 7px ${colors.color3},
+      -2px -6px 6px ${colors.red}, 0 -8px 7px ${colors.color3},
       1px -9px 8px ${colors.color5};
     transition: 0.2s ease;
 

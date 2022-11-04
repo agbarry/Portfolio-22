@@ -74,10 +74,10 @@ export const LogoStyled = styled(Link)`
     1px -1px 3px ${colors.color5},
     -2px -2px 4px ${({ $isDarkMode }) => ($isDarkMode ? colors.color2 : colors.color3)},
     2px -4px 5px ${colors.color2}, -2px -6px 6px ${colors.color1},
-    0 -8px 7px ${colors.color4}, 1px -9px 8px ${colors.color3};
+    0 -8px 7px ${colors.red}, 1px -9px 8px ${colors.color3};
 
   & span {
-    color: ${colors.black1};
+    color: ${({ $isDarkMode }) => ($isDarkMode ? colors.white1 : colors.black1)};
   }
 
   @media screen and (max-width: 960px) {

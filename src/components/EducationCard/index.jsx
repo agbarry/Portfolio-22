@@ -19,7 +19,7 @@ function EducationCard({ id, name, department, field, level, focus, year, logo }
     <EducationCardWrapper impair={isImpair}>
       <YearStyled isDarkMode={theme === 'dark'}>
           <li> {year} </li> 
-          {year === '2022-2023' ? <span>en cours</span> : null}
+          {year === '2021-2023' ? <span>en cours</span> : null}
       </YearStyled>
 
       <InfosContainer isDarkMode={theme === 'dark'}>
