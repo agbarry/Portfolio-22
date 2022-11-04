@@ -6,6 +6,7 @@ export const AboutWrapper = styled.div`
   display: flex;
   gap: 2rem;
   flex-flow: row nowrap;
+  align-items: center;
 
   & img {
     width: 380px;
@@ -17,6 +18,18 @@ export const AboutWrapper = styled.div`
 
   @media screen and (max-width: 960px) {
     flex-flow: column-reverse wrap;
+
+    & img {
+      width: 360px;
+      margin: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 440px) {
+    & img {
+      width: 320px;
+      margin: 1rem;
+    }
   }
 `
 
@@ -27,9 +40,9 @@ export const AboutContainer = styled.div`
   user-select: none;
   font-size: 1.2rem;
 
-  @media screen and (max-width: 960px) {
-    font-size: 1.2rem;
-  }
+  /* @media screen and (max-width: 960px) {
+    font-size: 1.1rem;
+  } */
 `
 
 export const TopStyled = styled.div`
@@ -38,7 +51,7 @@ export const TopStyled = styled.div`
   margin-bottom: 0;
 
   @media screen and (max-width: 960px) {
-    margin-left: 1rem;
+    margin: 1rem;
   }
 `
 
@@ -57,6 +70,10 @@ export const BottomStyled = styled.div`
   justify-content: space-between ;
   row-gap: 1rem;
   flex-flow: row nowrap;
+
+  @media screen and (max-width: 960px) {
+    flex-wrap: wrap;
+  }
 `
 
 export const BottomContent = styled.div`
