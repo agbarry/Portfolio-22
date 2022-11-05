@@ -39,7 +39,7 @@ function Home() {
               Rassurez-vous que je mettrai en œuvre tout mon potentiel pour que
               ça se passe bien, même si je n'ai quasiment pas d'expériences professionnelles, sachez que 
               durant mon parcours de formation j'ai eu à dévelloper bon nombre de petits projets(universitaires et personnels) 
-              qui sont d'ailleurs décrits sur la page <Link to="/experiences" title='Expériences'>``Expériences``</Link> et cela 
+              qui sont d'ailleurs décrits sur la page <Link to="/experiences" title='Expériences'>"Expériences"</Link> et cela 
               m'a permi d'être autonome et surtout de pouvoir travailler en équipe.
               {/* car durant mon curcus universi🍊 
                car durant mon parcours de formation, j'ai su allier

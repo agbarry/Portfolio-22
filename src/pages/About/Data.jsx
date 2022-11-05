@@ -49,7 +49,7 @@ const languagesList = [
 
   { id: 1, name: 'Français', level: 'Billingue' },
 
-  { id: 2, name: 'Anglais', level: 'Élémentaire' },
+  { id: 2, name: 'Anglais', level: 'Compétence professionnelle limitée' },
 ]
 
 export const languages = [{ id: 0, title: 'Langues', content: languagesList }]

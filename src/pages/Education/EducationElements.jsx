@@ -28,7 +28,7 @@ export const Title = styled.div`
   margin-bottom: 2rem;
   text-align: center;
   font-family: ${fonts.font6}, ${fonts.fontParams};
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   @media screen and (max-width: 960px) {
     width: 80%;

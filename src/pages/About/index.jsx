@@ -11,16 +11,15 @@ import {
 } from './AboutElements'
 import { aboutInformation, interest, languages, personalQuality } from './Data'
 import profil from '../../assets/images/portrait1.jpg'
-// import Typical from "react-typical";
 
 function About() {
   const { theme } = useContext(ThemeContext)
 
   return (
-    <motion.div initial={{width: 0}} animate={{width: "100vw"}} exit={{width: window.innerWidth, transition: {duration: 0.1}}}>
+    <motion.div initial={{width: 0}} animate={{width: "100%"}} exit={{width: window.innerWidth, transition: {duration: 0.1}}}>
     <AboutWrapper>
       <AboutContainer>
-        <TopStyled>
+         <TopStyled>
           <p>
             Je suis <span> Aguibou Barry</span>,
             jeune d'origine guinéen résidant en france précisement à Bordeaux depuis
@@ -76,7 +75,7 @@ function About() {
               ))}
             </BottomContent>
           ))}
-        </BottomStyled>
+        </BottomStyled> 
       </AboutContainer>
 
       <div>

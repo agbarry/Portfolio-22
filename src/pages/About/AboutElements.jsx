@@ -2,14 +2,13 @@ import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 
 export const AboutWrapper = styled.div`
-  max-width: 1536px;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   flex-flow: row nowrap;
   align-items: center;
 
   & img {
-    width: 370px;
+    width: 380px;
     margin: 4rem;
     margin-top: 2rem;
     margin-left: 0;
@@ -42,9 +41,7 @@ export const AboutContainer = styled.div`
 `
 
 export const TopStyled = styled.div`
-  margin: 4rem;
-  /* margin-right: 0;
-  margin-bottom: 0; */
+  margin-left: 4rem;
 
   @media screen and (max-width: 960px) {
     margin: 1rem;
@@ -64,7 +61,7 @@ export const BottomStyled = styled.div`
   margin-top: 0;
   display: flex;
   justify-content: space-between ;
-  row-gap: 5px;
+  row-gap: 10px;
   flex-flow: row nowrap;
 
   @media screen and (max-width: 960px) {

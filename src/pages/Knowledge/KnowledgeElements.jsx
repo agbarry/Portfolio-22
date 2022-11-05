@@ -163,6 +163,7 @@ export const OthersStyled = styled.ul`
 
   & h2 {
     padding-bottom: 0.8rem;
+    font-size: 1.2rem;
     color: ${({ isDarkMode }) => (isDarkMode ? colors.color2 : colors.color3)};
   }
 `
