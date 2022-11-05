@@ -12,7 +12,7 @@ function Education() {
   const { theme } = useContext(ThemeContext);
   return (
     <motion.div initial={{width: 0}} animate={{width: "100%"}} exit={{width: window.innerWidth, transition: {duration: 0.1}}}>
-      <EducationWrapper>
+      <EducationWrapper id="educ">
         <Title isDarkMode={theme === 'dark'}>
             Ci-dessous le détail de mon parcours de formation allant du <span>baccalauréat</span> en 
             <span> sciences mathématiques</span> jusqu'au <span>master</span> en <span>génie logiciel </span> 

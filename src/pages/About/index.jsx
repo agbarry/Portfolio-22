@@ -37,20 +37,6 @@ function About() {
         </TopStyled>
 
         <BottomStyled>
-          {interest.map((interest) => (
-            <BottomContent key={`${interest.id}`} isDarkMode={theme === 'dark'}>
-              <h5>{interest.title}</h5>
-
-              {interest.content.map((iContent) => (
-                <ul key={`${iContent.id}`}>
-                  <Detail>
-                    {iContent.title}
-                  </Detail>
-                </ul>
-              ))}
-            </BottomContent>
-          ))}
-
           {languages.map((language) => (
             <BottomContent key={`${language.id}`} isDarkMode={theme === 'dark'}>
               <h5>{language.title}</h5>
@@ -72,6 +58,20 @@ function About() {
               {quality.content.map((qContent) => (
                 <ul key={`${qContent.id}`}>
                   <Detail>{qContent.name}</Detail>
+                </ul>
+              ))}
+            </BottomContent>
+          ))}
+
+          {interest.map((interest) => (
+            <BottomContent key={`${interest.id}`} isDarkMode={theme === 'dark'}>
+              <h5>{interest.title}</h5>
+
+              {interest.content.map((iContent) => (
+                <ul key={`${iContent.id}`}>
+                  <Detail>
+                    {iContent.title}
+                  </Detail>
                 </ul>
               ))}
             </BottomContent>

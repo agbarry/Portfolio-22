@@ -1,4 +1,4 @@
-import cv from '../../assets/documents/cv.pdf'
+import cv from '../../assets/documents/CV_General.pdf'
 import { Link } from 'react-router-dom'
 import Profile from '../../components/Profile'
 import { useContext } from 'react'
@@ -20,7 +20,7 @@ function Home() {
 
   return (
     <motion.div initial={{width: 0}} animate={{width: "100%"}} exit={{width: window.innerWidth, transition: {duration: 0.1}}}>
-      <HomeWrapper>
+      <HomeWrapper id='home'>
         <HomeWrapperTop>
           <Profile />
 
@@ -37,10 +37,15 @@ function Home() {
               Par la même occasion, si tout se passe bien, je serai très ravi d'un
               contrat 😍 pour une éventuelle montée en compétences.
               Rassurez-vous que je mettrai en œuvre tout mon potentiel pour que
-              ça se passe bien, car durant mon parcours de formation, j'ai su allier
+              ça se passe bien, même si je n'ai quasiment pas d'expériences professionnelles, sachez que 
+              durant mon parcours de formation j'ai eu à dévelloper bon nombre de petits projets(universitaires et personnels) 
+              qui sont d'ailleurs décrits sur la page <Link to="/experiences" title='Expériences'>``Expériences``</Link> et cela 
+              m'a permi d'être autonome et surtout de pouvoir travailler en équipe.
+              {/* car durant mon curcus universi🍊 
+               car durant mon parcours de formation, j'ai su allier
                étude et travail sans que cela influe sur mes résultats même si je ne suis 
               probablement pas parmi le lot des meilleurs, mais ce qui reste sur ce que je remplis toujours 
-              ma part de travail que ce soit individuellement ou collectivement.
+              ma part de travail que ce soit individuellement ou collectivement. */}
               {/* permit d'être autonome et aussi de pouvoir 
                travailler en équipe.  le dynamisme, la motivation, l'organisation,
               l'autonomie, l'esprit d'équipe et sans oublié le côté humain définit

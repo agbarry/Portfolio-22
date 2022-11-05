@@ -9,7 +9,7 @@ export const AboutWrapper = styled.div`
   align-items: center;
 
   & img {
-    width: 380px;
+    width: 370px;
     margin: 4rem;
     margin-top: 2rem;
     margin-left: 0;
@@ -39,16 +39,12 @@ export const AboutContainer = styled.div`
   flex-flow: column nowrap;
   user-select: none;
   font-size: 1.2rem;
-
-  /* @media screen and (max-width: 960px) {
-    font-size: 1.1rem;
-  } */
 `
 
 export const TopStyled = styled.div`
   margin: 4rem;
-  margin-right: 0;
-  margin-bottom: 0;
+  /* margin-right: 0;
+  margin-bottom: 0; */
 
   @media screen and (max-width: 960px) {
     margin: 1rem;
@@ -59,7 +55,7 @@ export const Detail = styled.li`
   list-style-position: inside;
   list-style-type: square;
   line-height: 2rem;
-  margin-left: 1rem;
+  margin-left: 10px;
   font-size: 0.8rem;
 `
 
@@ -68,7 +64,7 @@ export const BottomStyled = styled.div`
   margin-top: 0;
   display: flex;
   justify-content: space-between ;
-  row-gap: 1rem;
+  row-gap: 5px;
   flex-flow: row nowrap;
 
   @media screen and (max-width: 960px) {
@@ -79,9 +75,5 @@ export const BottomStyled = styled.div`
 export const BottomContent = styled.div`
   & h5 {
     color: ${({ isDarkMode }) => (isDarkMode ? colors.color2 : colors.color3)};
-  }
-
-  & ul {
-    margin-left: 1rem;
   }
 `

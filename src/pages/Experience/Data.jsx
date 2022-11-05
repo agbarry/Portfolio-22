@@ -7,8 +7,7 @@ const experienceList = [
     projectTitle:
       'Simulation d’un tas de sable abélien en programmation parallèle. Ce projet à été réalisé tout au long ' +
       'du second semestre de master 1 et se subdivise en quatre rendus(parties), les trois premiers sont fait ' +
-      'en groupe de deux(binôme) et le dernier rendu en individuel. ' +
-      "L'objectif est ",
+      'en groupe de deux(binôme) et le dernier rendu en individuel. ',
     description: ['Travail en équipe'],
     langages: ['C', 'C++', 'OpenMP', 'OpenCL', 'MPI', 'GIT/GITLAB'],
     documents: [
@@ -37,7 +36,7 @@ const experienceList = [
         title: 'Rapport de la dernière partie',
       },
     ],
-    date: '2021-2022',
+    date: '2022',
   },
 
   {
@@ -67,7 +66,7 @@ const experienceList = [
         title: 'Rapport pour la présentation',
       },
     ],
-    date: '2020-2021',
+    date: '2021',
   },
 
   {
@@ -93,7 +92,7 @@ const experienceList = [
         title: 'Document technique Bacchanator',
       },
     ],
-    date: '2019-2020',
+    date: '2020',
   },
 
   {
