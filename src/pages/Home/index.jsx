@@ -1,4 +1,4 @@
-import cv from '../../assets/documents/CV_General.pdf'
+import cv from '../../assets/documents/CV.pdf'
 import { Link } from 'react-router-dom'
 import Profile from '../../components/Profile'
 import { useContext } from 'react'
@@ -59,7 +59,7 @@ function Home() {
             </DescriptionStyled>
 
             <DownloadCV isDarkMode={theme === 'dark'} title="Télécharger mon CV">
-              <a href={cv} download="Aguibou_Barry.pdf">
+              <a href={cv} download="CV_Aguibou-Barry_M2-GL_INFO.pdf">
                 Télécharger CV <FaDownload />
               </a>
             </DownloadCV>
