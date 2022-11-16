@@ -2,15 +2,15 @@
   --> Affichage avec une barre de progression
 */
 export const knowledgesList = [
-  { id: 0, name: "Java", xp: 4.2 },
+  { id: 0, name: "Java", xp: 3.8 },
   { id: 1, name: "JavaScript", xp: 2.1 },
-  { id: 2, name: "React", xp: 1.5 },
-  { id: 3, name: "Node Js", xp: 1.1 },
-  { id: 4, name: "Angular", xp: 0.8 },
+  { id: 2, name: "React", xp: 1.2 },
+  { id: 3, name: "Node Js", xp: 0.8 },
+  { id: 4, name: "Angular", xp: 0.9 },
   { id: 5, name: "Django", xp: 1.2 },
   { id: 6, name: "Spring Boot", xp: 0.6 },
-  { id: 7, name: "Python", xp: 2.6 },
-  { id: 8, name: "C/ C++", xp: 3.8 },
+  { id: 7, name: "Python", xp: 2.5 },
+  { id: 8, name: "C/ C++", xp: 3.5 },
 ];
 
 

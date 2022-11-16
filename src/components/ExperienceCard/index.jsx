@@ -63,7 +63,7 @@ function ExperienceCard({
                   download={document.title}
                   title={document.title}
                 >
-                  Voir {document.name}
+                  {document.name}
                 </a>
               </li>
             ))

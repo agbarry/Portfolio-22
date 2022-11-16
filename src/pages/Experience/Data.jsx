@@ -2,6 +2,53 @@
 const experienceList = [
   {
     id: 0,
+    projectName: 'Cuisine & moi',
+    entrepriseName: 'Université de Bordeaux',
+    projectTitle:
+      "Conception d'une application web permettant de faire une recherche personnalisée de recettes à partir d'un  " +
+      "profil alimentaire utilisateur (en cours de réalisation). ",
+    description: ['Participation aux choix des technologies à utiliser','Travail en équipe'],
+    langages: ['Angular', 'Node/ Spring Boot', 'Mongodb', 'Docker', 'GIT/Github'],
+    documents: [
+      {
+        id: 0,
+        name: 'Sujet',
+        content: require('../../assets/documents/Description_projet_web.pdf'),
+        title: 'Courte description du projet',
+      },
+      {
+        id: 1,
+        name: 'Présentation',
+        content: require('../../assets/documents/Cuisine&Moi-Présentation.pdf'),
+        title: 'Transparents de présentation du projet',
+      }
+    ],
+    date: '2022-2023',
+  },
+
+  {
+    id: 1,
+    projectName: 'UB_Météo (Application météo)',
+    entrepriseName: 'Université de Bordeaux',
+    projectTitle:
+      "Conception d'une SPA (Single Page Application) permettant de faire des requêtes sur le site 'prevision-meteo.ch'  " +
+      "pour chercher des flux de données JSON correspondant à la météo de la ville spécifiée sur toutes les  " + 
+      "localités de Suisse, France et Belgique.",
+    description: ["Utilisation du DOM","Utilisation d'une API tierce (requêtes)"],
+    langages: ['JavaScript', 'HTML', 'CSS', 'Leaflet', 'GIT/Github'],
+    documents: [
+      {
+        id: 0,
+        name: 'Rapport',
+        content: require('../../assets/documents/Prog_web_Weather.pdf'),
+        title: 'Rapport minimaliste du projet',
+      }
+    ],
+    date: '2022',
+  },
+
+  {
+    id: 2,
     projectName: 'EasyPAP',
     entrepriseName: 'Université de Bordeaux',
     projectTitle:
@@ -40,7 +87,7 @@ const experienceList = [
   },
 
   {
-    id: 1,
+    id: 3,
     projectName: 'Logiciel ludo-éducatif',
     entrepriseName: 'Université de Bordeaux',
     projectTitle:
@@ -70,7 +117,7 @@ const experienceList = [
   },
 
   {
-    id: 2,
+    id: 4,
     projectName: 'Bacchanator',
     entrepriseName: 'Université de Bordeaux',
     projectTitle:
@@ -96,7 +143,7 @@ const experienceList = [
   },
 
   {
-    id: 3,
+    id: 5,
     projectName: 'Ubbot Assist',
     entrepriseName: 'Université de Bordeaux',
     projectTitle:
@@ -129,7 +176,7 @@ const experienceList = [
   },
 
   {
-    id: 4,
+    id: 6,
     projectName: 'Duck Of The Realm',
     entrepriseName: 'Université de Bordeaux',
     projectTitle:

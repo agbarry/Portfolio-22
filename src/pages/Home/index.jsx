@@ -1,4 +1,4 @@
-import cv from '../../assets/documents/CV.pdf'
+import cv from '../../assets/documents/CV_BARRY_Aguibou_M2_INFO.pdf'
 import { Link } from 'react-router-dom'
 import Profile from '../../components/Profile'
 import { useContext } from 'react'
@@ -47,8 +47,8 @@ function Home() {
               cycle universitaire et aussi de découvrir le monde professionnel.
               Par la même occasion, si tout se passe bien, je serai très ravi d'obtenir un
               contrat 😍 pour une éventuelle montée en compétences.
-              Rassurez-vous que je mettrai en œuvre tout mon potentiel pour que
-              ça se passe bien, même si je n'ai quasiment pas d'expériences professionnelles, sachez que 
+              Rassurez-vous que je mettrai en œuvre tout mon potentiel pour le bon 
+              déroulement du stage, même si je n'ai quasiment pas d'expériences professionnelles, sachez que 
               durant mon parcours de formation j'ai eu à dévelloper bon nombre de projets(universitaires et personnels) 
               qui sont d'ailleurs décrits sur la page <Link to="/experiences" title='Expériences'>"Expériences"</Link> et cela 
               m'a permi d'être autonome et surtout de pouvoir travailler en équipe.
@@ -59,7 +59,7 @@ function Home() {
             </DescriptionStyled>
 
             <DownloadCV isDarkMode={theme === 'dark'} title="Télécharger mon CV">
-              <a href={cv} download="CV_Aguibou-Barry_M2-GL_INFO.pdf">
+              <a href={cv} download="CV_BARRY_Aguibou_M2_INFO.pdf">
                 Télécharger CV <FaDownload />
               </a>
             </DownloadCV>
