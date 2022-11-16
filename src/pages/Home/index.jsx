@@ -1,4 +1,4 @@
-import cv from '../../assets/documents/CV_BARRY_Aguibou_M2_INFO.pdf'
+import cv from '../../assets/documents/CV.pdf'
 import { Link } from 'react-router-dom'
 import Profile from '../../components/Profile'
 import { useContext } from 'react'
